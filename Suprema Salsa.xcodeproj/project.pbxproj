@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		616808C31B4AE2C900883EEE /* jamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C21B4AE2C900883EEE /* jamaica.jpg */; };
+		616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C61B4AE64100883EEE /* unTacoPastor.jpg */; };
+		616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */; };
+		616808CB1B4AE74400883EEE /* unTacoArabe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808CA1B4AE74400883EEE /* unTacoArabe.jpg */; };
+		616808CD1B4AEBF900883EEE /* unaCemaArabe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808CC1B4AEBF900883EEE /* unaCemaArabe.jpg */; };
+		616808CF1B4AEC7E00883EEE /* unaCemaPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808CE1B4AEC7E00883EEE /* unaCemaPastor.jpg */; };
+		616808D11B4AECC800883EEE /* gringa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808D01B4AECC800883EEE /* gringa.jpg */; };
+		616808D31B4AECF900883EEE /* sincronizada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808D21B4AECF900883EEE /* sincronizada.jpg */; };
+		616808D51B4AED1F00883EEE /* chalupas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808D41B4AED1E00883EEE /* chalupas.jpg */; };
+		616808D71B4AED4300883EEE /* tacoDeBistek.png in Resources */ = {isa = PBXBuildFile; fileRef = 616808D61B4AED4300883EEE /* tacoDeBistek.png */; };
+		616808D91B4AED7C00883EEE /* arrachera.png in Resources */ = {isa = PBXBuildFile; fileRef = 616808D81B4AED7C00883EEE /* arrachera.png */; };
+		616808DB1B4AEDAF00883EEE /* sirlon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808DA1B4AEDAF00883EEE /* sirlon.jpg */; };
+		616808DD1B4AEDF900883EEE /* refresco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808DC1B4AEDF900883EEE /* refresco.jpg */; };
+		616808DF1B4AEE3C00883EEE /* cerveza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808DE1B4AEE3C00883EEE /* cerveza.jpg */; };
+		616808E11B4AEE7600883EEE /* aguaNatural.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E01B4AEE7600883EEE /* aguaNatural.jpg */; };
+		616808E31B4AEEA800883EEE /* aguaHorchata.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E21B4AEEA800883EEE /* aguaHorchata.jpg */; };
+		616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E41B4AEED800883EEE /* aguaJamaica.jpg */; };
 		61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */; };
 		61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E091B46FC8D00BE9DB5 /* Main.storyboard */; };
 		61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */; };
@@ -58,6 +75,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		616808C21B4AE2C900883EEE /* jamaica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jamaica.jpg; sourceTree = "<group>"; };
+		616808C61B4AE64100883EEE /* unTacoPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unTacoPastor.jpg; sourceTree = "<group>"; };
+		616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cincoTacosPastor.jpg; sourceTree = "<group>"; };
+		616808CA1B4AE74400883EEE /* unTacoArabe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unTacoArabe.jpg; sourceTree = "<group>"; };
+		616808CC1B4AEBF900883EEE /* unaCemaArabe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unaCemaArabe.jpg; sourceTree = "<group>"; };
+		616808CE1B4AEC7E00883EEE /* unaCemaPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unaCemaPastor.jpg; sourceTree = "<group>"; };
+		616808D01B4AECC800883EEE /* gringa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gringa.jpg; sourceTree = "<group>"; };
+		616808D21B4AECF900883EEE /* sincronizada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sincronizada.jpg; sourceTree = "<group>"; };
+		616808D41B4AED1E00883EEE /* chalupas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chalupas.jpg; sourceTree = "<group>"; };
+		616808D61B4AED4300883EEE /* tacoDeBistek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tacoDeBistek.png; sourceTree = "<group>"; };
+		616808D81B4AED7C00883EEE /* arrachera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrachera.png; sourceTree = "<group>"; };
+		616808DA1B4AEDAF00883EEE /* sirlon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sirlon.jpg; sourceTree = "<group>"; };
+		616808DC1B4AEDF900883EEE /* refresco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = refresco.jpg; sourceTree = "<group>"; };
+		616808DE1B4AEE3C00883EEE /* cerveza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cerveza.jpg; sourceTree = "<group>"; };
+		616808E01B4AEE7600883EEE /* aguaNatural.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aguaNatural.jpg; sourceTree = "<group>"; };
+		616808E21B4AEEA800883EEE /* aguaHorchata.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aguaHorchata.jpg; sourceTree = "<group>"; };
+		616808E41B4AEED800883EEE /* aguaJamaica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aguaJamaica.jpg; sourceTree = "<group>"; };
 		61E55DFE1B46FC8D00BE9DB5 /* Suprema Salsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Suprema Salsa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E55E021B46FC8D00BE9DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +156,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		616808C41B4AE62D00883EEE /* Promos */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */,
+				61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */,
+				61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */,
+				61E55E981B48925C00BE9DB5 /* cochinita1.jpg */,
+				61E55E991B48925C00BE9DB5 /* cochinita2.jpg */,
+				61E55E9C1B4892BC00BE9DB5 /* pastorKilo.jpg */,
+				61E55E9E1B489C0400BE9DB5 /* tortaArabe.jpg */,
+				616808C21B4AE2C900883EEE /* jamaica.jpg */,
+			);
+			name = Promos;
+			sourceTree = "<group>";
+		};
+		616808C51B4AE63800883EEE /* Carta */ = {
+			isa = PBXGroup;
+			children = (
+				616808C61B4AE64100883EEE /* unTacoPastor.jpg */,
+				616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */,
+				616808CA1B4AE74400883EEE /* unTacoArabe.jpg */,
+				616808CC1B4AEBF900883EEE /* unaCemaArabe.jpg */,
+				616808CE1B4AEC7E00883EEE /* unaCemaPastor.jpg */,
+				616808D01B4AECC800883EEE /* gringa.jpg */,
+				616808D21B4AECF900883EEE /* sincronizada.jpg */,
+				616808D41B4AED1E00883EEE /* chalupas.jpg */,
+				616808D61B4AED4300883EEE /* tacoDeBistek.png */,
+				616808D81B4AED7C00883EEE /* arrachera.png */,
+				616808DA1B4AEDAF00883EEE /* sirlon.jpg */,
+				616808DC1B4AEDF900883EEE /* refresco.jpg */,
+				616808DE1B4AEE3C00883EEE /* cerveza.jpg */,
+				616808E01B4AEE7600883EEE /* aguaNatural.jpg */,
+				616808E21B4AEEA800883EEE /* aguaHorchata.jpg */,
+				616808E41B4AEED800883EEE /* aguaJamaica.jpg */,
+			);
+			name = Carta;
+			sourceTree = "<group>";
+		};
 		61E55DF51B46FC8D00BE9DB5 = {
 			isa = PBXGroup;
 			children = (
@@ -223,13 +295,8 @@
 		61E55E911B4891AE00BE9DB5 /* Productos */ = {
 			isa = PBXGroup;
 			children = (
-				61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */,
-				61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */,
-				61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */,
-				61E55E981B48925C00BE9DB5 /* cochinita1.jpg */,
-				61E55E991B48925C00BE9DB5 /* cochinita2.jpg */,
-				61E55E9C1B4892BC00BE9DB5 /* pastorKilo.jpg */,
-				61E55E9E1B489C0400BE9DB5 /* tortaArabe.jpg */,
+				616808C51B4AE63800883EEE /* Carta */,
+				616808C41B4AE62D00883EEE /* Promos */,
 			);
 			name = Productos;
 			sourceTree = "<group>";
@@ -367,32 +434,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616808E11B4AEE7600883EEE /* aguaNatural.jpg in Resources */,
 				61E55E731B4874AC00BE9DB5 /* map.png in Resources */,
 				61E55E651B48611D00BE9DB5 /* shopping48x48.png in Resources */,
 				61E55E711B48749D00BE9DB5 /* wishlist.png in Resources */,
+				616808CB1B4AE74400883EEE /* unTacoArabe.jpg in Resources */,
 				61E55E7C1B48764A00BE9DB5 /* settings2.png in Resources */,
 				61E55E771B4875A400BE9DB5 /* perfil_egresado.png in Resources */,
+				616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */,
 				61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */,
 				61E55E9A1B48925C00BE9DB5 /* cochinita1.jpg in Resources */,
 				61E55E671B48636700BE9DB5 /* capParty48x48.png in Resources */,
+				616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */,
 				61E55E791B4875EB00BE9DB5 /* settings.png in Resources */,
 				61E55E7D1B48764A00BE9DB5 /* settings3.png in Resources */,
+				616808D31B4AECF900883EEE /* sincronizada.jpg in Resources */,
+				616808D71B4AED4300883EEE /* tacoDeBistek.png in Resources */,
 				61E55E9B1B48925C00BE9DB5 /* cochinita2.jpg in Resources */,
+				616808DD1B4AEDF900883EEE /* refresco.jpg in Resources */,
 				61E55E101B46FC8D00BE9DB5 /* LaunchScreen.xib in Resources */,
+				616808CD1B4AEBF900883EEE /* unaCemaArabe.jpg in Resources */,
 				61E55E6F1B48732800BE9DB5 /* logo3.jpg in Resources */,
 				61E55E9F1B489C0400BE9DB5 /* tortaArabe.jpg in Resources */,
 				61E55E9D1B4892BC00BE9DB5 /* pastorKilo.jpg in Resources */,
+				616808C31B4AE2C900883EEE /* jamaica.jpg in Resources */,
+				616808CF1B4AEC7E00883EEE /* unaCemaPastor.jpg in Resources */,
+				616808DB1B4AEDAF00883EEE /* sirlon.jpg in Resources */,
 				61E55E6C1B48713900BE9DB5 /* perfil48x48.png in Resources */,
 				61E55F0B1B4978BD00BE9DB5 /* Promos.plist in Resources */,
+				616808DF1B4AEE3C00883EEE /* cerveza.jpg in Resources */,
 				61E55E951B4891EC00BE9DB5 /* arabeCemita.jpg in Resources */,
+				616808E31B4AEEA800883EEE /* aguaHorchata.jpg in Resources */,
+				616808D11B4AECC800883EEE /* gringa.jpg in Resources */,
 				61E55E631B48602300BE9DB5 /* tenedorYCuchillo48x48.png in Resources */,
 				61E55E971B4891EC00BE9DB5 /* arabeTacos.jpeg in Resources */,
 				61E55E7F1B48784D00BE9DB5 /* logout.jpg in Resources */,
+				616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */,
 				61E55E751B4874BB00BE9DB5 /* comments.png in Resources */,
+				616808D91B4AED7C00883EEE /* arrachera.png in Resources */,
 				61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */,
 				61E55E611B485EC200BE9DB5 /* carrito48x48.png in Resources */,
 				61E55E961B4891EC00BE9DB5 /* arabeKilo.jpg in Resources */,
 				61E55E6D1B48713900BE9DB5 /* perfil64x64.png in Resources */,
+				616808D51B4AED1F00883EEE /* chalupas.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
