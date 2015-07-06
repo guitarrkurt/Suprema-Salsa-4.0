@@ -36,6 +36,15 @@
 		61E55E891B487F0D00BE9DB5 /* CartaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */; };
 		61E55E8B1B487F3600BE9DB5 /* EventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */; };
 		61E55E8D1B487F5100BE9DB5 /* CarritoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E8C1B487F5100BE9DB5 /* CarritoTableViewController.swift */; };
+		61E55E8F1B488F6300BE9DB5 /* PromosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E8E1B488F6300BE9DB5 /* PromosTableViewCell.swift */; };
+		61E55E951B4891EC00BE9DB5 /* arabeCemita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */; };
+		61E55E961B4891EC00BE9DB5 /* arabeKilo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */; };
+		61E55E971B4891EC00BE9DB5 /* arabeTacos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */; };
+		61E55E9A1B48925C00BE9DB5 /* cochinita1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E981B48925C00BE9DB5 /* cochinita1.jpg */; };
+		61E55E9B1B48925C00BE9DB5 /* cochinita2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E991B48925C00BE9DB5 /* cochinita2.jpg */; };
+		61E55E9D1B4892BC00BE9DB5 /* pastorKilo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E9C1B4892BC00BE9DB5 /* pastorKilo.jpg */; };
+		61E55E9F1B489C0400BE9DB5 /* tortaArabe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E9E1B489C0400BE9DB5 /* tortaArabe.jpg */; };
+		61E55F0B1B4978BD00BE9DB5 /* Promos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61E55F0A1B4978BD00BE9DB5 /* Promos.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +70,12 @@
 		61E55E561B485B1B00BE9DB5 /* Suprema Salsa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Suprema Salsa-Bridging-Header.h"; sourceTree = "<group>"; };
 		61E55E571B485B1B00BE9DB5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		61E55E581B485B1B00BE9DB5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromosTableViewController.swift; path = ../PromosTableViewController.swift; sourceTree = "<group>"; };
+		61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosTableViewController.swift; sourceTree = "<group>"; };
 		61E55E601B485EC200BE9DB5 /* carrito48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrito48x48.png; sourceTree = "<group>"; };
 		61E55E621B48602300BE9DB5 /* tenedorYCuchillo48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tenedorYCuchillo48x48.png; sourceTree = "<group>"; };
 		61E55E641B48611D00BE9DB5 /* shopping48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping48x48.png; sourceTree = "<group>"; };
 		61E55E661B48636700BE9DB5 /* capParty48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capParty48x48.png; sourceTree = "<group>"; };
-		61E55E681B486DF000BE9DB5 /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		61E55E681B486DF000BE9DB5 /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = "Suprema Salsa/PerfilViewController.swift"; sourceTree = "<group>"; };
 		61E55E6A1B48713900BE9DB5 /* perfil48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil48x48.png; sourceTree = "<group>"; };
 		61E55E6B1B48713900BE9DB5 /* perfil64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil64x64.png; sourceTree = "<group>"; };
 		61E55E6E1B48732800BE9DB5 /* logo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo3.jpg; sourceTree = "<group>"; };
@@ -84,6 +93,15 @@
 		61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaTableViewController.swift; sourceTree = "<group>"; };
 		61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventosViewController.swift; sourceTree = "<group>"; };
 		61E55E8C1B487F5100BE9DB5 /* CarritoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarritoTableViewController.swift; sourceTree = "<group>"; };
+		61E55E8E1B488F6300BE9DB5 /* PromosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromosTableViewCell.swift; path = "Suprema Salsa/PromosTableViewCell.swift"; sourceTree = "<group>"; };
+		61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeCemita.jpg; sourceTree = "<group>"; };
+		61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeKilo.jpg; sourceTree = "<group>"; };
+		61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeTacos.jpeg; sourceTree = "<group>"; };
+		61E55E981B48925C00BE9DB5 /* cochinita1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cochinita1.jpg; sourceTree = "<group>"; };
+		61E55E991B48925C00BE9DB5 /* cochinita2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cochinita2.jpg; sourceTree = "<group>"; };
+		61E55E9C1B4892BC00BE9DB5 /* pastorKilo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pastorKilo.jpg; sourceTree = "<group>"; };
+		61E55E9E1B489C0400BE9DB5 /* tortaArabe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tortaArabe.jpg; sourceTree = "<group>"; };
+		61E55F0A1B4978BD00BE9DB5 /* Promos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Promos.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +125,6 @@
 		61E55DF51B46FC8D00BE9DB5 = {
 			isa = PBXGroup;
 			children = (
-				61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */,
-				61E55E841B4879D000BE9DB5 /* MapViewController.swift */,
-				61E55E861B4879F800BE9DB5 /* SettingsViewController.swift */,
-				61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */,
-				61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */,
-				61E55E8C1B487F5100BE9DB5 /* CarritoTableViewController.swift */,
 				61E55E001B46FC8D00BE9DB5 /* Suprema Salsa */,
 				61E55E181B46FC8D00BE9DB5 /* Suprema SalsaTests */,
 				61E55DFF1B46FC8D00BE9DB5 /* Products */,
@@ -131,13 +143,9 @@
 		61E55E001B46FC8D00BE9DB5 /* Suprema Salsa */ = {
 			isa = PBXGroup;
 			children = (
-				61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */,
-				61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */,
 				61E55E091B46FC8D00BE9DB5 /* Main.storyboard */,
-				61E55E681B486DF000BE9DB5 /* PerfilViewController.swift */,
-				61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */,
-				61E55E0E1B46FC8D00BE9DB5 /* LaunchScreen.xib */,
-				61E55E551B485AE500BE9DB5 /* SWRevealViewController */,
+				61E55F061B49772200BE9DB5 /* SlideOutMenuControllers */,
+				61E55F071B49775200BE9DB5 /* TabControllers */,
 				61E55E011B46FC8D00BE9DB5 /* Supporting Files */,
 			);
 			path = "Suprema Salsa";
@@ -146,8 +154,9 @@
 		61E55E011B46FC8D00BE9DB5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61E55F0C1B497AA000BE9DB5 /* Data */,
+				61E55F091B49785B00BE9DB5 /* Launch */,
 				61E55E5E1B485E9200BE9DB5 /* Imagenes */,
-				61E55E021B46FC8D00BE9DB5 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,11 +186,13 @@
 				61E55E561B485B1B00BE9DB5 /* Suprema Salsa-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
+			path = "Suprema Salsa";
 			sourceTree = "<group>";
 		};
 		61E55E5E1B485E9200BE9DB5 /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				61E55E911B4891AE00BE9DB5 /* Productos */,
 				61E55E5F1B485EA600BE9DB5 /* Iconos */,
 			);
 			name = Imagenes;
@@ -207,6 +218,73 @@
 				61E55E7E1B48784D00BE9DB5 /* logout.jpg */,
 			);
 			name = Iconos;
+			sourceTree = "<group>";
+		};
+		61E55E911B4891AE00BE9DB5 /* Productos */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */,
+				61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */,
+				61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */,
+				61E55E981B48925C00BE9DB5 /* cochinita1.jpg */,
+				61E55E991B48925C00BE9DB5 /* cochinita2.jpg */,
+				61E55E9C1B4892BC00BE9DB5 /* pastorKilo.jpg */,
+				61E55E9E1B489C0400BE9DB5 /* tortaArabe.jpg */,
+			);
+			name = Productos;
+			sourceTree = "<group>";
+		};
+		61E55F061B49772200BE9DB5 /* SlideOutMenuControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E551B485AE500BE9DB5 /* SWRevealViewController */,
+				61E55E681B486DF000BE9DB5 /* PerfilViewController.swift */,
+				61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */,
+				61E55E841B4879D000BE9DB5 /* MapViewController.swift */,
+				61E55E861B4879F800BE9DB5 /* SettingsViewController.swift */,
+			);
+			name = SlideOutMenuControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		61E55F071B49775200BE9DB5 /* TabControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E8C1B487F5100BE9DB5 /* CarritoTableViewController.swift */,
+				61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */,
+				61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */,
+				61E55F081B49777E00BE9DB5 /* Promos */,
+			);
+			name = TabControllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		61E55F081B49777E00BE9DB5 /* Promos */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */,
+				61E55E8E1B488F6300BE9DB5 /* PromosTableViewCell.swift */,
+			);
+			name = Promos;
+			sourceTree = "<group>";
+		};
+		61E55F091B49785B00BE9DB5 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E021B46FC8D00BE9DB5 /* Info.plist */,
+				61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */,
+				61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */,
+				61E55E0E1B46FC8D00BE9DB5 /* LaunchScreen.xib */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		61E55F0C1B497AA000BE9DB5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				61E55F0A1B4978BD00BE9DB5 /* Promos.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,17 +373,25 @@
 				61E55E7C1B48764A00BE9DB5 /* settings2.png in Resources */,
 				61E55E771B4875A400BE9DB5 /* perfil_egresado.png in Resources */,
 				61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */,
+				61E55E9A1B48925C00BE9DB5 /* cochinita1.jpg in Resources */,
 				61E55E671B48636700BE9DB5 /* capParty48x48.png in Resources */,
 				61E55E791B4875EB00BE9DB5 /* settings.png in Resources */,
 				61E55E7D1B48764A00BE9DB5 /* settings3.png in Resources */,
+				61E55E9B1B48925C00BE9DB5 /* cochinita2.jpg in Resources */,
 				61E55E101B46FC8D00BE9DB5 /* LaunchScreen.xib in Resources */,
 				61E55E6F1B48732800BE9DB5 /* logo3.jpg in Resources */,
+				61E55E9F1B489C0400BE9DB5 /* tortaArabe.jpg in Resources */,
+				61E55E9D1B4892BC00BE9DB5 /* pastorKilo.jpg in Resources */,
 				61E55E6C1B48713900BE9DB5 /* perfil48x48.png in Resources */,
+				61E55F0B1B4978BD00BE9DB5 /* Promos.plist in Resources */,
+				61E55E951B4891EC00BE9DB5 /* arabeCemita.jpg in Resources */,
 				61E55E631B48602300BE9DB5 /* tenedorYCuchillo48x48.png in Resources */,
+				61E55E971B4891EC00BE9DB5 /* arabeTacos.jpeg in Resources */,
 				61E55E7F1B48784D00BE9DB5 /* logout.jpg in Resources */,
 				61E55E751B4874BB00BE9DB5 /* comments.png in Resources */,
 				61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */,
 				61E55E611B485EC200BE9DB5 /* carrito48x48.png in Resources */,
+				61E55E961B4891EC00BE9DB5 /* arabeKilo.jpg in Resources */,
 				61E55E6D1B48713900BE9DB5 /* perfil64x64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +416,7 @@
 				61E55E871B4879F800BE9DB5 /* SettingsViewController.swift in Sources */,
 				61E55E8D1B487F5100BE9DB5 /* CarritoTableViewController.swift in Sources */,
 				61E55E891B487F0D00BE9DB5 /* CartaTableViewController.swift in Sources */,
+				61E55E8F1B488F6300BE9DB5 /* PromosTableViewCell.swift in Sources */,
 				61E55E591B485B1B00BE9DB5 /* SWRevealViewController.m in Sources */,
 				61E55E691B486DF000BE9DB5 /* PerfilViewController.swift in Sources */,
 				61E55E831B4879A900BE9DB5 /* NewsTableViewController.swift in Sources */,

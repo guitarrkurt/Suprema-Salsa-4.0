@@ -8,16 +8,31 @@
 
 import UIKit
 
-class PromosTableViewController: UITableViewController {
-
+class PromosTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - Propertys
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    var imageTitle  : [String]  = [String]()
+    var bodyArray   : [String]  = [String]()
+    var precioArray : [Float]   = [Float]()
+    
+    // MARK: - Constructor
     override func viewDidLoad() {
+        //Slide out menu
         super.viewDidLoad()
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        //Load Image from Promos.plist
+        let path = NSBundle.mainBundle().pathForResource("Promos", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: path!)
+
+        bodyArray = dict!.objectForKey("ProductDescription") as! [String]
+        precioArray = dict!.objectForKey("Price") as! [Float]
+        imageTitle = dict!.objectForKey("ImageTitle") as! [String]
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,72 +41,32 @@ class PromosTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return bodyArray.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PromosTableViewCell
 
-        // Configure the cell...
+        cell.imageCell.image = UIImage(named: imageTitle[indexPath.row])
+        cell.labelBodyCell.text  = bodyArray[indexPath.row]
+        cell.labelPrecioCell.text = "$\(precioArray[indexPath.row])"
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    
+    // MARK: - Table view delegate
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        println("Selecciono: \(bodyArray[indexPath.row])")
+        
+            performSegueWithIdentifier("showDescription", sender: self)
 
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

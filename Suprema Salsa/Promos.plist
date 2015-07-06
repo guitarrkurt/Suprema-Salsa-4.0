@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Price</key>
+	<array>
+		<real>189</real>
+		<real>189</real>
+		<real>189</real>
+		<real>38</real>
+		<real>38</real>
+		<real>38</real>
+	</array>
+	<key>ProductDescription</key>
+	<array>
+		<string>Kilo De Carne Arabe</string>
+		<string>Kilo De Carne Pastor</string>
+		<string>Kilo De Cochinita</string>
+		<string>2 Tacos De Harina</string>
+		<string>2 Cemitas</string>
+		<string>2 Tortas</string>
+	</array>
+	<key>ImageTitle</key>
+	<array>
+		<string>arabeKilo.jpg</string>
+		<string>pastorKilo.jpg</string>
+		<string>cochinita2.jpg</string>
+		<string>arabeTacos.jpeg</string>
+		<string>arabeCemita.jpg</string>
+		<string>tortaArabe.jpg</string>
+	</array>
+</dict>
+</plist>
