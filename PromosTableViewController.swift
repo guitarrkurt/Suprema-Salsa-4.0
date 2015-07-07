@@ -13,9 +13,11 @@ class PromosTableViewController: UITableViewController, UITableViewDataSource, U
     // MARK: - Propertys
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    var imageTitle  : [String]  = [String]()
-    var bodyArray   : [String]  = [String]()
-    var precioArray : [Float]   = [Float]()
+    var imageTitle               : [String]               = [String]       ()
+    var bodyArray                : [String]               = [String]       ()
+    var precioArray              : [Float]                = [Float]        ()
+    var arrayConsulta            :  NSMutableArray        =  NSMutableArray()
+    var promoFromArrayConsulta   : Promos                 =  Promos        ()
     
     // MARK: - Constructor
     override func viewDidLoad() {
@@ -26,13 +28,9 @@ class PromosTableViewController: UITableViewController, UITableViewDataSource, U
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        //Load Image from Promos.plist
-        let path = NSBundle.mainBundle().pathForResource("Promos", ofType: "plist")
-        let dict = NSDictionary(contentsOfFile: path!)
-
-        bodyArray = dict!.objectForKey("ProductDescription") as! [String]
-        precioArray = dict!.objectForKey("Price") as! [Float]
-        imageTitle = dict!.objectForKey("ImageTitle") as! [String]
+        //Hacemos la consulta a la DB(SupremaSalsa.sqlite) y lo alojamos en un NSMuatableArray
+        arrayConsulta     =  ModelManager.instance.selectFromPromos()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,22 +46,24 @@ class PromosTableViewController: UITableViewController, UITableViewDataSource, U
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return bodyArray.count
+        return arrayConsulta.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PromosTableViewCell
-
-        cell.imageCell.image = UIImage(named: imageTitle[indexPath.row])
-        cell.labelBodyCell.text  = bodyArray[indexPath.row]
-        cell.labelPrecioCell.text = "$\(precioArray[indexPath.row])"
+        
+        //Casteamos cada item del NSMutableArray que es un objeto de tipo Promos
+        promoFromArrayConsulta = arrayConsulta[indexPath.row] as! Promos
+        
+        cell.imageCell.image      = UIImage(named: promoFromArrayConsulta.imageTitle)
+        cell.labelBodyCell.text   = promoFromArrayConsulta.nombreProducto
+        cell.labelPrecioCell.text = "$ \(promoFromArrayConsulta.precioProducto)"
 
         return cell
     }
     
     // MARK: - Table view delegate
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        println("Selecciono: \(bodyArray[indexPath.row])")
         
             performSegueWithIdentifier("showDescription", sender: self)
 
