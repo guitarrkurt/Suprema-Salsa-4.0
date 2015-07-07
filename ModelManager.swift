@@ -58,5 +58,47 @@ class ModelManager: NSObject {
         return array
     }
 
-    
+    func selectFromCarta() -> NSMutableArray{
+        var array        : NSMutableArray = NSMutableArray()
+        
+        sharedInstance.database!.open()
+        
+        var query = "SELECT * FROM carta"
+        println("\n query: \(query)")
+        
+        var resultSet: FMResultSet! = sharedInstance.database!.executeQuery(query, withArgumentsInArray: nil)
+        //Vaciamos en un NSMutableArray
+        if (resultSet != nil) {
+            while resultSet.next() {
+                
+                var instancia   : carta = carta()
+                
+                instancia.id                = (resultSet.stringForColumn("id") as NSString).integerValue
+                println("instancia.id            : \(instancia.id)")
+                
+                instancia.nombre            = resultSet.stringForColumn("nombre")
+                println("instancia.nombre        : \(instancia.nombre)")
+                
+                instancia.imageTitle        = resultSet.stringForColumn("imageTitle")
+                println("instancia.imageTitle    : \(instancia.imageTitle)")
+                
+                instancia.precio            = (resultSet.stringForColumn("precio") as NSString).floatValue
+                println("instancia.precio        : \(instancia.precio)")
+                
+                /*instancia.precioConQueso    = (resultSet.stringForColumn("precioConQueso") as NSString).floatValue
+                println("instancia.precioConQueso: \(instancia.precioConQueso)")
+                
+                instancia.esBebida          = (resultSet.stringForColumn("esBebida") as NSString).boolValue
+                println("instancia.esBebida      : \(instancia.esBebida)\n")*/
+                
+                
+                array.addObject(instancia)
+            }
+            
+        }
+        //Cerramos base
+        sharedInstance.database!.close()
+        
+        return array
+    }
 }

@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         Util.copyFile("SupremaSalsa.sqlite")
+        
+        UINavigationBar.appearance().barTintColor = UIColor.brownColor()
+        UINavigationBar.appearance().tintColor = UIColor(red: 87.0/255.0, green: 65.0/255.0, blue: 47.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 87.0/255.0, green: 65.0/255.0, blue: 47.0/255.0, alpha: 1.0)]
+        
+        /*self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]*/
         return true
     }
 

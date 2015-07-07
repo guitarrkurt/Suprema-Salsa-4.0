@@ -13,11 +13,8 @@ class PromosTableViewController: UITableViewController, UITableViewDataSource, U
     // MARK: - Propertys
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    var imageTitle               : [String]               = [String]       ()
-    var bodyArray                : [String]               = [String]       ()
-    var precioArray              : [Float]                = [Float]        ()
     var arrayConsulta            :  NSMutableArray        =  NSMutableArray()
-    var promoFromArrayConsulta   : Promos                 =  Promos        ()
+    var promoFromArrayConsulta   :  Promos                 =  Promos        ()
     
     // MARK: - Constructor
     override func viewDidLoad() {
@@ -28,6 +25,7 @@ class PromosTableViewController: UITableViewController, UITableViewDataSource, U
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
         //Hacemos la consulta a la DB(SupremaSalsa.sqlite) y lo alojamos en un NSMuatableArray
         arrayConsulta     =  ModelManager.instance.selectFromPromos()
         
@@ -50,7 +48,7 @@ class PromosTableViewController: UITableViewController, UITableViewDataSource, U
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! PromosTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("promosIdentifier", forIndexPath: indexPath) as! PromosTableViewCell
         
         //Casteamos cada item del NSMutableArray que es un objeto de tipo Promos
         promoFromArrayConsulta = arrayConsulta[indexPath.row] as! Promos

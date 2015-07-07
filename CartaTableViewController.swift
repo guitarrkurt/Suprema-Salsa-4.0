@@ -10,7 +10,14 @@ import UIKit
 
 class CartaTableViewController: UITableViewController {
 
+    // MARK: - Propertys
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    var arrayConsulta            :  NSMutableArray        =  NSMutableArray()
+    var promoFromArrayConsulta   :  carta                 =  carta        ()
+    let arrayPicker = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    // MARK: - Constructor
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.revealViewController() != nil {
@@ -18,36 +25,46 @@ class CartaTableViewController: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        //Hacemos la consulta a la DB(SupremaSalsa.sqlite) y lo alojamos en un NSMuatableArray
+        arrayConsulta     =  ModelManager.instance.selectFromCarta()
+
+        
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
+        // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return arrayConsulta.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cartaIdentifier", forIndexPath: indexPath) as! CartaTableViewCell
+        
+        //Casteamos cada item del NSMutableArray que es un objeto de tipo Promos
+        promoFromArrayConsulta = arrayConsulta[indexPath.row] as! carta
+        
+        
+        cell.imageCarta.image = UIImage(named: promoFromArrayConsulta.imageTitle)
+        cell.nameCarta.text = promoFromArrayConsulta.nombre
+        cell.precioCarta.text = "$ \(promoFromArrayConsulta.precio)"
 
-        // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -34,6 +34,12 @@
 		6168099C1B4AFD0800883EEE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168099A1B4AFD0800883EEE /* Util.swift */; };
 		6168099D1B4AFD0800883EEE /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168099B1B4AFD0800883EEE /* ModelManager.swift */; };
 		6168099F1B4AFD4600883EEE /* Promos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168099E1B4AFD4600883EEE /* Promos.swift */; };
+		616809D11B4B957600883EEE /* carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616809D01B4B957600883EEE /* carta.swift */; };
+		618061571B4C29C4008473C8 /* cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061561B4C29C4008473C8 /* cheese.png */; };
+		6180615B1B4C2B3C008473C8 /* palomita1.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061581B4C2B3C008473C8 /* palomita1.png */; };
+		6180615C1B4C2B3C008473C8 /* palomita2.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061591B4C2B3C008473C8 /* palomita2.png */; };
+		6180615D1B4C2B3C008473C8 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6180615A1B4C2B3C008473C8 /* plus.png */; };
+		6180615F1B4C2D51008473C8 /* CartaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */; };
 		61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */; };
 		61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E091B46FC8D00BE9DB5 /* Main.storyboard */; };
 		61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */; };
@@ -117,6 +123,12 @@
 		6168099A1B4AFD0800883EEE /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		6168099B1B4AFD0800883EEE /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		6168099E1B4AFD4600883EEE /* Promos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promos.swift; sourceTree = "<group>"; };
+		616809D01B4B957600883EEE /* carta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carta.swift; sourceTree = "<group>"; };
+		618061561B4C29C4008473C8 /* cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheese.png; sourceTree = "<group>"; };
+		618061581B4C2B3C008473C8 /* palomita1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palomita1.png; sourceTree = "<group>"; };
+		618061591B4C2B3C008473C8 /* palomita2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palomita2.png; sourceTree = "<group>"; };
+		6180615A1B4C2B3C008473C8 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaTableViewCell.swift; sourceTree = "<group>"; };
 		61E55DFE1B46FC8D00BE9DB5 /* Suprema Salsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Suprema Salsa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E55E021B46FC8D00BE9DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -253,8 +265,22 @@
 				6168099A1B4AFD0800883EEE /* Util.swift */,
 				6168099B1B4AFD0800883EEE /* ModelManager.swift */,
 				6168099E1B4AFD4600883EEE /* Promos.swift */,
+				616809D01B4B957600883EEE /* carta.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		616809D21B4B985900883EEE /* Carta */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */,
+				618061561B4C29C4008473C8 /* cheese.png */,
+				618061581B4C2B3C008473C8 /* palomita1.png */,
+				618061591B4C2B3C008473C8 /* palomita2.png */,
+				6180615A1B4C2B3C008473C8 /* plus.png */,
+				6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */,
+			);
+			name = Carta;
 			sourceTree = "<group>";
 		};
 		61E55DF51B46FC8D00BE9DB5 = {
@@ -382,9 +408,9 @@
 		61E55F071B49775200BE9DB5 /* TabControllers */ = {
 			isa = PBXGroup;
 			children = (
+				616809D21B4B985900883EEE /* Carta */,
 				61E55E8C1B487F5100BE9DB5 /* CarritoTableViewController.swift */,
 				61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */,
-				61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */,
 				61E55F081B49777E00BE9DB5 /* Promos */,
 			);
 			name = TabControllers;
@@ -506,6 +532,7 @@
 				616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */,
 				61E55E791B4875EB00BE9DB5 /* settings.png in Resources */,
 				61E55E7D1B48764A00BE9DB5 /* settings3.png in Resources */,
+				6180615C1B4C2B3C008473C8 /* palomita2.png in Resources */,
 				616808D31B4AECF900883EEE /* sincronizada.jpg in Resources */,
 				616808D71B4AED4300883EEE /* tacoDeBistek.png in Resources */,
 				61E55E9B1B48925C00BE9DB5 /* cochinita2.jpg in Resources */,
@@ -532,7 +559,10 @@
 				61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */,
 				61E55E611B485EC200BE9DB5 /* carrito48x48.png in Resources */,
 				61E55E961B4891EC00BE9DB5 /* arabeKilo.jpg in Resources */,
+				6180615B1B4C2B3C008473C8 /* palomita1.png in Resources */,
+				6180615D1B4C2B3C008473C8 /* plus.png in Resources */,
 				61E55E6D1B48713900BE9DB5 /* perfil64x64.png in Resources */,
+				618061571B4C29C4008473C8 /* cheese.png in Resources */,
 				616808D51B4AED1F00883EEE /* chalupas.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,8 +584,10 @@
 				61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */,
 				61E55E8B1B487F3600BE9DB5 /* EventosViewController.swift in Sources */,
 				61E55E851B4879D000BE9DB5 /* MapViewController.swift in Sources */,
+				6180615F1B4C2D51008473C8 /* CartaTableViewCell.swift in Sources */,
 				616809931B4AFC9A00883EEE /* FMDatabase.m in Sources */,
 				6168099F1B4AFD4600883EEE /* Promos.swift in Sources */,
+				616809D11B4B957600883EEE /* carta.swift in Sources */,
 				61E55E871B4879F800BE9DB5 /* SettingsViewController.swift in Sources */,
 				6168099D1B4AFD0800883EEE /* ModelManager.swift in Sources */,
 				616809961B4AFC9A00883EEE /* FMDatabaseQueue.m in Sources */,
