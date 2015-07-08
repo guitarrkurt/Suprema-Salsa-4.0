@@ -17,7 +17,9 @@ class CartaTableViewCell: UITableViewCell {
     @IBOutlet weak var precioCarta: UILabel!
     @IBOutlet weak var labelCantidad: UILabel!
     @IBOutlet weak var stepperOutlet: UIStepper!
-    
+    //Carrito
+    var pedido:String = String()
+    var siSePuede:NSMutableArray = NSMutableArray()
     //Respaldo Precio Inicial
     var banderaInicio = true
     var queso: Float = 5.0
@@ -89,9 +91,36 @@ class CartaTableViewCell: UITableViewCell {
             banderaButton = false
             self.addCarritoCarta.setImage(UIImage(named: "palomita2.png"), forState: UIControlState.Normal)
             
+            //Agrega los productos al carrito
+            let path = NSBundle.mainBundle().pathForResource("pedido", ofType: "plist")
+            println("path: \(path)")
+            
+            let dict = NSMutableDictionary(contentsOfFile: path!)
+            println("dict: \(dict)")
+            
+            if switchCarta.on{//Con queso
+                pedido = "\(valorStepper) de \(nameCarta.text!) con queso"
+                println(pedido)
+                dict?.setValue(pedido, forKey: "pedidos")
+                println("dict: \(dict)")
+                
+            }else{
+                pedido = "\(valorStepper) de \(nameCarta.text!)"
+                println(pedido)
+                
+                dict?.setValue(pedido, forKey: "pedidos")
+                println("dict: \(dict)")
+            }
+            
+            dict!.writeToFile(path!, atomically: false)
+            
+            
         }else{
             //Cambia la bandera
             banderaButton = true
+            
+            
+            //Regresa al estado inicial
             self.addCarritoCarta.setImage(UIImage(named: "plus.png"), forState: UIControlState.Normal)
             
             self.precioCarta.text = "\(respaldoPrecio)"
@@ -99,6 +128,8 @@ class CartaTableViewCell: UITableViewCell {
             self.labelCantidad.text = "\(valorStepper)"
             self.switchCarta.setOn(false, animated: true)
         }
+        
+
 
     }
     

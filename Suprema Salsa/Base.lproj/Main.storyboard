@@ -52,7 +52,6 @@
                         <segue destination="46c-Gn-PqF" kind="relationship" relationship="viewControllers" id="VYu-fa-gfb"/>
                         <segue destination="4Dp-bj-8AT" kind="relationship" relationship="viewControllers" id="YeJ-L9-AUL"/>
                         <segue destination="XNZ-sP-NyU" kind="relationship" relationship="viewControllers" id="UuQ-js-oTe"/>
-                        <segue destination="FFl-29-1JU" kind="relationship" relationship="viewControllers" id="9DQ-jz-EKD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -389,9 +388,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Carta" id="Cra-Ph-nE9">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="crR-ax-lMY"/>
+                        <barButtonItem key="rightBarButtonItem" image="carrito48x48.png" id="RWF-qT-ndu">
+                            <connections>
+                                <action selector="enviarCarrito:" destination="V0R-gf-7in" id="hab-Gx-0jE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="crR-ax-lMY" id="5My-oO-bAt"/>
+                        <segue destination="DI1-zu-zRc" kind="show" identifier="enviarCarritoSegue" id="Qku-bA-67d"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cL8-X3-KKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -422,37 +427,58 @@
             </objects>
             <point key="canvasLocation" x="4626" y="2404"/>
         </scene>
-        <!--Carrito-->
-        <scene sceneID="3Dv-im-wwr">
+        <!--Carrito Compras-->
+        <scene sceneID="n56-Ky-BM4">
             <objects>
-                <tableViewController id="Xlm-Rw-UEC" customClass="CarritoTableViewController" customModule="Suprema_Salsa" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jwd-eM-ACa">
+                <viewController id="DI1-zu-zRc" customClass="CarritoViewController" customModule="Suprema_Salsa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yoq-JR-Khv"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jj-83-QxG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VIf-ng-Wyh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pP5-NV-i86">
+                                <rect key="frame" x="0.0" y="20" width="600" height="419"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DI1-zu-zRc" id="yxo-Ex-V0i"/>
+                                    <outlet property="delegate" destination="DI1-zu-zRc" id="EyJ-Be-t5A"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qea-hM-Bbu">
+                                <rect key="frame" x="0.0" y="441" width="600" height="110"/>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="1Wx-Pc-FcD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Enviar">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qgl-4n-olm">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qgl-4n-olm" id="wJQ-Pf-jYD">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Xlm-Rw-UEC" id="Fju-ld-CG3"/>
-                            <outlet property="delegate" destination="Xlm-Rw-UEC" id="WTl-l5-DA6"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Carrito" id="dZU-rt-bZz">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="nM9-3G-EYS"/>
-                    </navigationItem>
+                        <constraints>
+                            <constraint firstItem="qea-hM-Bbu" firstAttribute="top" secondItem="pP5-NV-i86" secondAttribute="bottom" constant="2" id="4DH-vM-dZu"/>
+                            <constraint firstItem="pP5-NV-i86" firstAttribute="leading" secondItem="qea-hM-Bbu" secondAttribute="leading" id="CdF-8x-1Hf"/>
+                            <constraint firstItem="pP5-NV-i86" firstAttribute="trailing" secondItem="qea-hM-Bbu" secondAttribute="trailing" id="YSB-Eg-ahU"/>
+                            <constraint firstItem="pP5-NV-i86" firstAttribute="leading" secondItem="VIf-ng-Wyh" secondAttribute="leading" id="ZIJ-iX-Pox"/>
+                            <constraint firstItem="qea-hM-Bbu" firstAttribute="bottom" secondItem="6jj-83-QxG" secondAttribute="top" id="e8d-og-y3m"/>
+                            <constraint firstAttribute="trailing" secondItem="qea-hM-Bbu" secondAttribute="trailing" id="gXY-oN-Jpb"/>
+                            <constraint firstItem="pP5-NV-i86" firstAttribute="top" secondItem="VIf-ng-Wyh" secondAttribute="top" constant="20" symbolic="YES" id="yTo-AY-BEy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Carrito Compras" id="M2g-IV-vkA"/>
                     <connections>
-                        <outlet property="menuButton" destination="nM9-3G-EYS" id="iaf-R6-18E"/>
+                        <outlet property="tableVIew" destination="pP5-NV-i86" id="MdZ-4J-BaG"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5Q-ha-sP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgQ-gS-rgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4626" y="3364"/>
+            <point key="canvasLocation" x="4626" y="3350"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="lX2-75-KZk">
@@ -694,25 +720,6 @@
             <point key="canvasLocation" x="3814" y="2404"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="aYN-dj-Zvn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FFl-29-1JU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="carrito48x48.png" id="Cr9-91-z0c"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MEG-xl-tvY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Xlm-Rw-UEC" kind="relationship" relationship="rootViewController" id="xHG-PA-0pP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Qm-UF-7hZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3814" y="3364"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="WAm-gL-zc9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xzb-Fp-1un" sceneMemberID="viewController">
@@ -784,6 +791,24 @@
             </objects>
             <point key="canvasLocation" x="1537" y="4426"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rw5-Br-aVy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Si-Ls-8M5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R4J-9m-WWn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DI1-zu-zRc" kind="relationship" relationship="rootViewController" id="h5y-eA-Qww"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCD-oi-3pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3852" y="3350"/>
+        </scene>
     </scenes>
     <resources>
         <image name="capParty48x48.png" width="48" height="48"/>
@@ -802,5 +827,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zN4-ZO-jJ8"/>
+        <segue reference="Qku-bA-67d"/>
     </inferredMetricsTieBreakers>
 </document>
