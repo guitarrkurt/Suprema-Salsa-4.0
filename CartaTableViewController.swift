@@ -57,15 +57,16 @@ class CartaTableViewController: UITableViewController {
         //Casteamos cada item del NSMutableArray que es un objeto de tipo Promos
         promoFromArrayConsulta = arrayConsulta[indexPath.row] as! carta
         
-        
+
         cell.imageCarta.image = UIImage(named: promoFromArrayConsulta.imageTitle)
         cell.nameCarta.text = promoFromArrayConsulta.nombre
         cell.precioCarta.text = "$ \(promoFromArrayConsulta.precio)"
-
-
+        
+        
         return cell
     }
-
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

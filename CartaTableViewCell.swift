@@ -13,16 +13,20 @@ class CartaTableViewCell: UITableViewCell {
     @IBOutlet weak var imageCarta: UIImageView!
     @IBOutlet weak var nameCarta: UILabel!
     @IBOutlet weak var addCarritoCarta: UIButton!
-    //@IBOutlet weak var pickerCarta: UIPickerView!
     @IBOutlet weak var switchCarta: UISwitch!
     @IBOutlet weak var precioCarta: UILabel!
+    @IBOutlet weak var labelCantidad: UILabel!
+    @IBOutlet weak var stepperOutlet: UIStepper!
     
-    
+    @IBAction func stepperAction(sender: UIStepper) {
+        println("Cantidad: \(Int(sender.value).description)")
+        self.labelCantidad.text = "Cantidad: \(Int(sender.value).description)"
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
 
+    }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

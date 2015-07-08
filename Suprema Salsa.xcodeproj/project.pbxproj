@@ -40,6 +40,8 @@
 		6180615C1B4C2B3C008473C8 /* palomita2.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061591B4C2B3C008473C8 /* palomita2.png */; };
 		6180615D1B4C2B3C008473C8 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6180615A1B4C2B3C008473C8 /* plus.png */; };
 		6180615F1B4C2D51008473C8 /* CartaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */; };
+		618061F11B4CADB3008473C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618061F01B4CADB3008473C8 /* MapKit.framework */; };
+		618061F31B4CB1B2008473C8 /* launchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 618061F21B4CB1B2008473C8 /* launchScreen.jpg */; };
 		61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */; };
 		61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E091B46FC8D00BE9DB5 /* Main.storyboard */; };
 		61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */; };
@@ -129,6 +131,8 @@
 		618061591B4C2B3C008473C8 /* palomita2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palomita2.png; sourceTree = "<group>"; };
 		6180615A1B4C2B3C008473C8 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaTableViewCell.swift; sourceTree = "<group>"; };
+		618061F01B4CADB3008473C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		618061F21B4CB1B2008473C8 /* launchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchScreen.jpg; sourceTree = "<group>"; };
 		61E55DFE1B46FC8D00BE9DB5 /* Suprema Salsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Suprema Salsa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E55E021B46FC8D00BE9DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				618061F11B4CADB3008473C8 /* MapKit.framework in Frameworks */,
 				616808E71B4AFAEA00883EEE /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +291,7 @@
 		61E55DF51B46FC8D00BE9DB5 = {
 			isa = PBXGroup;
 			children = (
+				618061F01B4CADB3008473C8 /* MapKit.framework */,
 				616808E61B4AFAEA00883EEE /* libsqlite3.dylib */,
 				616808E81B4AFB0200883EEE /* SupremaSalsa.sqlite */,
 				61E55E001B46FC8D00BE9DB5 /* Suprema Salsa */,
@@ -433,6 +439,7 @@
 				61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */,
 				61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */,
 				61E55E0E1B46FC8D00BE9DB5 /* LaunchScreen.xib */,
+				618061F21B4CB1B2008473C8 /* launchScreen.jpg */,
 			);
 			name = Launch;
 			sourceTree = "<group>";
@@ -527,6 +534,7 @@
 				61E55E771B4875A400BE9DB5 /* perfil_egresado.png in Resources */,
 				616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */,
 				61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */,
+				618061F31B4CB1B2008473C8 /* launchScreen.jpg in Resources */,
 				61E55E9A1B48925C00BE9DB5 /* cochinita1.jpg in Resources */,
 				61E55E671B48636700BE9DB5 /* capParty48x48.png in Resources */,
 				616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */,
