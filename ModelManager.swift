@@ -85,11 +85,11 @@ class ModelManager: NSObject {
                 instancia.precio            = (resultSet.stringForColumn("precio") as NSString).floatValue
                 println("instancia.precio        : \(instancia.precio)")
                 
-                /*instancia.precioConQueso    = (resultSet.stringForColumn("precioConQueso") as NSString).floatValue
+                instancia.precioConQueso    = (resultSet.stringForColumn("precioConQueso") as NSString).floatValue
                 println("instancia.precioConQueso: \(instancia.precioConQueso)")
                 
                 instancia.esBebida          = (resultSet.stringForColumn("esBebida") as NSString).boolValue
-                println("instancia.esBebida      : \(instancia.esBebida)\n")*/
+                println("instancia.esBebida      : \(instancia.esBebida)\n")
                 
                 
                 array.addObject(instancia)

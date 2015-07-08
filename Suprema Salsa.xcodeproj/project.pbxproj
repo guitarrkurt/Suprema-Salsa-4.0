@@ -25,7 +25,6 @@
 		616808E31B4AEEA800883EEE /* aguaHorchata.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E21B4AEEA800883EEE /* aguaHorchata.jpg */; };
 		616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E41B4AEED800883EEE /* aguaJamaica.jpg */; };
 		616808E71B4AFAEA00883EEE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 616808E61B4AFAEA00883EEE /* libsqlite3.dylib */; };
-		616808E91B4AFB3000883EEE /* SupremaSalsa.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 616808E81B4AFB0200883EEE /* SupremaSalsa.sqlite */; };
 		616809931B4AFC9A00883EEE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 616809891B4AFC9A00883EEE /* FMDatabase.m */; };
 		616809941B4AFC9A00883EEE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6168098B1B4AFC9A00883EEE /* FMDatabaseAdditions.m */; };
 		616809951B4AFC9A00883EEE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6168098D1B4AFC9A00883EEE /* FMDatabasePool.m */; };
@@ -42,6 +41,7 @@
 		6180615F1B4C2D51008473C8 /* CartaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */; };
 		618061F11B4CADB3008473C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618061F01B4CADB3008473C8 /* MapKit.framework */; };
 		618061F31B4CB1B2008473C8 /* launchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 618061F21B4CB1B2008473C8 /* launchScreen.jpg */; };
+		618062241B4CDA1F008473C8 /* SupremaSalsa.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 616808E81B4AFB0200883EEE /* SupremaSalsa.sqlite */; };
 		61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */; };
 		61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E091B46FC8D00BE9DB5 /* Main.storyboard */; };
 		61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E0C1B46FC8D00BE9DB5 /* Images.xcassets */; };
@@ -524,7 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				616808E91B4AFB3000883EEE /* SupremaSalsa.sqlite in Resources */,
+				618062241B4CDA1F008473C8 /* SupremaSalsa.sqlite in Resources */,
 				616808E11B4AEE7600883EEE /* aguaNatural.jpg in Resources */,
 				61E55E731B4874AC00BE9DB5 /* map.png in Resources */,
 				61E55E651B48611D00BE9DB5 /* shopping48x48.png in Resources */,

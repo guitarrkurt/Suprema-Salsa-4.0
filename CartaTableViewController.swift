@@ -58,11 +58,11 @@ class CartaTableViewController: UITableViewController {
         promoFromArrayConsulta = arrayConsulta[indexPath.row] as! carta
         
 
+
         cell.imageCarta.image = UIImage(named: promoFromArrayConsulta.imageTitle)
         cell.nameCarta.text = promoFromArrayConsulta.nombre
-        cell.precioCarta.text = "$ \(promoFromArrayConsulta.precio)"
-        
-        
+        //cell.precioCarta.text = "$ \(promoFromArrayConsulta.precio)"
+        cell.precioCarta.text = "\(promoFromArrayConsulta.precio)"
         return cell
     }
     

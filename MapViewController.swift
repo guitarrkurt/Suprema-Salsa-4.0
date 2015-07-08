@@ -42,7 +42,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         point3.subtitle = "Via Atlixcayolt 283-80-86"
         mapa.addAnnotation(point3)
         
-        mapa.centerCoordinate = point2.coordinate
+        //Universidad Madero
+        var UMAD = CLLocationCoordinate2D(latitude: 19.047292, longitude: -98.258518)
+
+        mapa.centerCoordinate = UMAD
         mapa.delegate = self
         
         //Span of the map
