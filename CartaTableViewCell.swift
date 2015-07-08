@@ -29,6 +29,9 @@ class CartaTableViewCell: UITableViewCell {
     var respaldoPrecio: Float = Float()
     var conQueso: Float = Float()
     
+    //Button Add
+    var banderaButton = true
+    
     @IBAction func stepperAction(sender: UIStepper) {
         respaldoPrecioInicial()
         //Obtenemos el valor del steppler
@@ -80,6 +83,24 @@ class CartaTableViewCell: UITableViewCell {
 
     }
     
+    @IBAction func buttonAction(sender: UIButton) {
+        if banderaButton {
+            //Cambia la bandera
+            banderaButton = false
+            self.addCarritoCarta.setImage(UIImage(named: "palomita2.png"), forState: UIControlState.Normal)
+            
+        }else{
+            //Cambia la bandera
+            banderaButton = true
+            self.addCarritoCarta.setImage(UIImage(named: "plus.png"), forState: UIControlState.Normal)
+            
+            self.precioCarta.text = "\(respaldoPrecio)"
+            valorStepper = 1.0
+            self.labelCantidad.text = "\(valorStepper)"
+            self.switchCarta.setOn(false, animated: true)
+        }
+
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -334,6 +334,9 @@
                                             <state key="normal" image="plus.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="buttonAction:" destination="Xla-Mz-Zhv" eventType="touchUpInside" id="8fS-NQ-Q23"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -449,7 +452,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5Q-ha-sP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5462" y="3128"/>
+            <point key="canvasLocation" x="4626" y="3364"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="lX2-75-KZk">
@@ -707,7 +710,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qm-UF-7hZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4650" y="3128"/>
+            <point key="canvasLocation" x="3814" y="3364"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WAm-gL-zc9">
