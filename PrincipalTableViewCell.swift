@@ -16,34 +16,11 @@ class PrincipalTableViewCell: UITableViewCell {
     @IBOutlet weak var botonFavoritos   : UIButton!
     @IBOutlet weak var botonAgregar     : UIButton!
     @IBOutlet weak var `switch`         : UISwitch!
-    
-    var banderaButton = true
-    
-    @IBAction func botonFavoritosAction(sender: UIButton) {
-        if banderaButton {
-
-            //Cambia la bandera
-            banderaButton = false
-    
-            println("Boton Favorito Activado")
-            
-            self.botonFavoritos.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
-        }else{
-
-            //Cambia la bandera
-            banderaButton = true
-            
-            println("Boton Favorito Activado")
-            
-            //Regresa al estado inicial
-            self.botonFavoritos.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
-
-        }
-    }
+    @IBOutlet weak var queso            : UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

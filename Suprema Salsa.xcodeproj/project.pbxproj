@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		615274321B583562003EAAAD /* SupremaSalsa4.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */; };
+		615274341B58BCCD003EAAAD /* tif.png in Resources */ = {isa = PBXBuildFile; fileRef = 615274331B58BCCD003EAAAD /* tif.png */; };
 		616808C31B4AE2C900883EEE /* jamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C21B4AE2C900883EEE /* jamaica.jpg */; };
 		616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C61B4AE64100883EEE /* unTacoPastor.jpg */; };
 		616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */; };
@@ -16,12 +18,10 @@
 		616808D11B4AECC800883EEE /* gringa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808D01B4AECC800883EEE /* gringa.jpg */; };
 		616808D31B4AECF900883EEE /* sincronizada.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808D21B4AECF900883EEE /* sincronizada.jpg */; };
 		616808D51B4AED1F00883EEE /* chalupas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808D41B4AED1E00883EEE /* chalupas.jpg */; };
-		616808D71B4AED4300883EEE /* tacoDeBistek.png in Resources */ = {isa = PBXBuildFile; fileRef = 616808D61B4AED4300883EEE /* tacoDeBistek.png */; };
 		616808D91B4AED7C00883EEE /* arrachera.png in Resources */ = {isa = PBXBuildFile; fileRef = 616808D81B4AED7C00883EEE /* arrachera.png */; };
 		616808DB1B4AEDAF00883EEE /* sirlon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808DA1B4AEDAF00883EEE /* sirlon.jpg */; };
 		616808DD1B4AEDF900883EEE /* refresco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808DC1B4AEDF900883EEE /* refresco.jpg */; };
 		616808DF1B4AEE3C00883EEE /* cerveza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808DE1B4AEE3C00883EEE /* cerveza.jpg */; };
-		616808E11B4AEE7600883EEE /* aguaNatural.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E01B4AEE7600883EEE /* aguaNatural.jpg */; };
 		616808E31B4AEEA800883EEE /* aguaHorchata.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E21B4AEEA800883EEE /* aguaHorchata.jpg */; };
 		616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E41B4AEED800883EEE /* aguaJamaica.jpg */; };
 		616808E71B4AFAEA00883EEE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 616808E61B4AFAEA00883EEE /* libsqlite3.dylib */; };
@@ -32,8 +32,6 @@
 		616809971B4AFC9A00883EEE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 616809921B4AFC9A00883EEE /* FMResultSet.m */; };
 		6168099C1B4AFD0800883EEE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168099A1B4AFD0800883EEE /* Util.swift */; };
 		6168099D1B4AFD0800883EEE /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168099B1B4AFD0800883EEE /* ModelManager.swift */; };
-		6168099F1B4AFD4600883EEE /* Promos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6168099E1B4AFD4600883EEE /* Promos.swift */; };
-		616809D11B4B957600883EEE /* carta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616809D01B4B957600883EEE /* carta.swift */; };
 		6172571E1B5589A400D7786F /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 6172571D1B5589A400D7786F /* cross.png */; };
 		617257201B5589B000D7786F /* carrito32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 6172571F1B5589B000D7786F /* carrito32x32.png */; };
 		617257221B558A9300D7786F /* startWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 617257211B558A9300D7786F /* startWhite.png */; };
@@ -41,14 +39,15 @@
 		617257261B558B9400D7786F /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617257251B558B9400D7786F /* PrincipalViewController.swift */; };
 		617257281B5597C600D7786F /* PrincipalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617257271B5597C600D7786F /* PrincipalTableViewCell.swift */; };
 		6172572A1B5597D500D7786F /* PrincipalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617257291B5597D500D7786F /* PrincipalCollectionViewCell.swift */; };
+		617257D01B574C1700D7786F /* productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617257CF1B574C1700D7786F /* productos.swift */; };
+		617257D21B57575E00D7786F /* aguaNatural.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808E01B4AEE7600883EEE /* aguaNatural.jpg */; };
+		617257D81B576E7B00D7786F /* tacoDeBistek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 617257D71B576E7B00D7786F /* tacoDeBistek.jpg */; };
 		618061571B4C29C4008473C8 /* cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061561B4C29C4008473C8 /* cheese.png */; };
 		6180615B1B4C2B3C008473C8 /* palomita1.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061581B4C2B3C008473C8 /* palomita1.png */; };
 		6180615C1B4C2B3C008473C8 /* palomita2.png in Resources */ = {isa = PBXBuildFile; fileRef = 618061591B4C2B3C008473C8 /* palomita2.png */; };
 		6180615D1B4C2B3C008473C8 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 6180615A1B4C2B3C008473C8 /* plus.png */; };
-		6180615F1B4C2D51008473C8 /* CartaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */; };
 		618061F11B4CADB3008473C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618061F01B4CADB3008473C8 /* MapKit.framework */; };
 		618061F31B4CB1B2008473C8 /* launchScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 618061F21B4CB1B2008473C8 /* launchScreen.jpg */; };
-		618062241B4CDA1F008473C8 /* SupremaSalsa.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 616808E81B4AFB0200883EEE /* SupremaSalsa.sqlite */; };
 		618062E81B4D6FBA008473C8 /* CarritoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618062E71B4D6FBA008473C8 /* CarritoViewController.swift */; };
 		61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E031B46FC8D00BE9DB5 /* AppDelegate.swift */; };
 		61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E091B46FC8D00BE9DB5 /* Main.storyboard */; };
@@ -56,7 +55,6 @@
 		61E55E101B46FC8D00BE9DB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E0E1B46FC8D00BE9DB5 /* LaunchScreen.xib */; };
 		61E55E1C1B46FC8D00BE9DB5 /* Suprema_SalsaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E1B1B46FC8D00BE9DB5 /* Suprema_SalsaTests.swift */; };
 		61E55E591B485B1B00BE9DB5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E581B485B1B00BE9DB5 /* SWRevealViewController.m */; };
-		61E55E5D1B485D1E00BE9DB5 /* PromosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */; };
 		61E55E611B485EC200BE9DB5 /* carrito48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E601B485EC200BE9DB5 /* carrito48x48.png */; };
 		61E55E631B48602300BE9DB5 /* tenedorYCuchillo48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E621B48602300BE9DB5 /* tenedorYCuchillo48x48.png */; };
 		61E55E651B48611D00BE9DB5 /* shopping48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E641B48611D00BE9DB5 /* shopping48x48.png */; };
@@ -76,9 +74,6 @@
 		61E55E831B4879A900BE9DB5 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */; };
 		61E55E851B4879D000BE9DB5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E841B4879D000BE9DB5 /* MapViewController.swift */; };
 		61E55E871B4879F800BE9DB5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E861B4879F800BE9DB5 /* SettingsViewController.swift */; };
-		61E55E891B487F0D00BE9DB5 /* CartaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */; };
-		61E55E8B1B487F3600BE9DB5 /* EventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */; };
-		61E55E8F1B488F6300BE9DB5 /* PromosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E55E8E1B488F6300BE9DB5 /* PromosTableViewCell.swift */; };
 		61E55E951B4891EC00BE9DB5 /* arabeCemita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */; };
 		61E55E961B4891EC00BE9DB5 /* arabeKilo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */; };
 		61E55E971B4891EC00BE9DB5 /* arabeTacos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */; };
@@ -99,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		615274331B58BCCD003EAAAD /* tif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tif.png; sourceTree = "<group>"; };
 		616808C21B4AE2C900883EEE /* jamaica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jamaica.jpg; sourceTree = "<group>"; };
 		616808C61B4AE64100883EEE /* unTacoPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unTacoPastor.jpg; sourceTree = "<group>"; };
 		616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cincoTacosPastor.jpg; sourceTree = "<group>"; };
@@ -108,7 +104,6 @@
 		616808D01B4AECC800883EEE /* gringa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gringa.jpg; sourceTree = "<group>"; };
 		616808D21B4AECF900883EEE /* sincronizada.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sincronizada.jpg; sourceTree = "<group>"; };
 		616808D41B4AED1E00883EEE /* chalupas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chalupas.jpg; sourceTree = "<group>"; };
-		616808D61B4AED4300883EEE /* tacoDeBistek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tacoDeBistek.png; sourceTree = "<group>"; };
 		616808D81B4AED7C00883EEE /* arrachera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrachera.png; sourceTree = "<group>"; };
 		616808DA1B4AEDAF00883EEE /* sirlon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sirlon.jpg; sourceTree = "<group>"; };
 		616808DC1B4AEDF900883EEE /* refresco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = refresco.jpg; sourceTree = "<group>"; };
@@ -117,7 +112,6 @@
 		616808E21B4AEEA800883EEE /* aguaHorchata.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aguaHorchata.jpg; sourceTree = "<group>"; };
 		616808E41B4AEED800883EEE /* aguaJamaica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aguaJamaica.jpg; sourceTree = "<group>"; };
 		616808E61B4AFAEA00883EEE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		616808E81B4AFB0200883EEE /* SupremaSalsa.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SupremaSalsa.sqlite; sourceTree = "<group>"; };
 		616809881B4AFC9A00883EEE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		616809891B4AFC9A00883EEE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		6168098A1B4AFC9A00883EEE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -131,8 +125,6 @@
 		616809921B4AFC9A00883EEE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		6168099A1B4AFD0800883EEE /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		6168099B1B4AFD0800883EEE /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
-		6168099E1B4AFD4600883EEE /* Promos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promos.swift; sourceTree = "<group>"; };
-		616809D01B4B957600883EEE /* carta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carta.swift; sourceTree = "<group>"; };
 		6172571D1B5589A400D7786F /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		6172571F1B5589B000D7786F /* carrito32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrito32x32.png; sourceTree = "<group>"; };
 		617257211B558A9300D7786F /* startWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startWhite.png; sourceTree = "<group>"; };
@@ -140,11 +132,13 @@
 		617257251B558B9400D7786F /* PrincipalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
 		617257271B5597C600D7786F /* PrincipalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewCell.swift; sourceTree = "<group>"; };
 		617257291B5597D500D7786F /* PrincipalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionViewCell.swift; sourceTree = "<group>"; };
+		617257CF1B574C1700D7786F /* productos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = productos.swift; sourceTree = "<group>"; };
+		617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SupremaSalsa4.sqlite; sourceTree = "<group>"; };
+		617257D71B576E7B00D7786F /* tacoDeBistek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tacoDeBistek.jpg; sourceTree = "<group>"; };
 		618061561B4C29C4008473C8 /* cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cheese.png; path = ../cheese.png; sourceTree = "<group>"; };
 		618061581B4C2B3C008473C8 /* palomita1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = palomita1.png; path = ../palomita1.png; sourceTree = "<group>"; };
 		618061591B4C2B3C008473C8 /* palomita2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = palomita2.png; path = ../palomita2.png; sourceTree = "<group>"; };
 		6180615A1B4C2B3C008473C8 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = ../plus.png; sourceTree = "<group>"; };
-		6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaTableViewCell.swift; sourceTree = "<group>"; };
 		618061F01B4CADB3008473C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		618061F21B4CB1B2008473C8 /* launchScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchScreen.jpg; sourceTree = "<group>"; };
 		618062E71B4D6FBA008473C8 /* CarritoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarritoViewController.swift; sourceTree = "<group>"; };
@@ -157,10 +151,9 @@
 		61E55E151B46FC8D00BE9DB5 /* Suprema SalsaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Suprema SalsaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E55E1A1B46FC8D00BE9DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E55E1B1B46FC8D00BE9DB5 /* Suprema_SalsaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suprema_SalsaTests.swift; sourceTree = "<group>"; };
-		61E55E561B485B1B00BE9DB5 /* Suprema Salsa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Suprema Salsa-Bridging-Header.h"; sourceTree = "<group>"; };
+		61E55E561B485B1B00BE9DB5 /* Suprema Salsa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Suprema Salsa-Bridging-Header.h"; path = "Suprema Salsa/Suprema Salsa-Bridging-Header.h"; sourceTree = "<group>"; };
 		61E55E571B485B1B00BE9DB5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		61E55E581B485B1B00BE9DB5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromosTableViewController.swift; sourceTree = "<group>"; };
 		61E55E601B485EC200BE9DB5 /* carrito48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrito48x48.png; sourceTree = "<group>"; };
 		61E55E621B48602300BE9DB5 /* tenedorYCuchillo48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tenedorYCuchillo48x48.png; sourceTree = "<group>"; };
 		61E55E641B48611D00BE9DB5 /* shopping48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopping48x48.png; sourceTree = "<group>"; };
@@ -180,9 +173,6 @@
 		61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		61E55E841B4879D000BE9DB5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		61E55E861B4879F800BE9DB5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaTableViewController.swift; sourceTree = "<group>"; };
-		61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventosViewController.swift; sourceTree = "<group>"; };
-		61E55E8E1B488F6300BE9DB5 /* PromosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromosTableViewCell.swift; path = "Suprema Salsa/PromosTableViewCell.swift"; sourceTree = "<group>"; };
 		61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeCemita.jpg; sourceTree = "<group>"; };
 		61E55E931B4891EC00BE9DB5 /* arabeKilo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeKilo.jpg; sourceTree = "<group>"; };
 		61E55E941B4891EC00BE9DB5 /* arabeTacos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeTacos.jpeg; sourceTree = "<group>"; };
@@ -238,7 +228,7 @@
 				616808D01B4AECC800883EEE /* gringa.jpg */,
 				616808D21B4AECF900883EEE /* sincronizada.jpg */,
 				616808D41B4AED1E00883EEE /* chalupas.jpg */,
-				616808D61B4AED4300883EEE /* tacoDeBistek.png */,
+				617257D71B576E7B00D7786F /* tacoDeBistek.jpg */,
 				616808D81B4AED7C00883EEE /* arrachera.png */,
 				616808DA1B4AEDAF00883EEE /* sirlon.jpg */,
 				616808DC1B4AEDF900883EEE /* refresco.jpg */,
@@ -274,6 +264,7 @@
 				616809901B4AFC9A00883EEE /* FMDB.h */,
 				616809911B4AFC9A00883EEE /* FMResultSet.h */,
 				616809921B4AFC9A00883EEE /* FMResultSet.m */,
+				61E55E561B485B1B00BE9DB5 /* Suprema Salsa-Bridging-Header.h */,
 			);
 			name = FMDB;
 			sourceTree = "<group>";
@@ -283,26 +274,16 @@
 			children = (
 				6168099A1B4AFD0800883EEE /* Util.swift */,
 				6168099B1B4AFD0800883EEE /* ModelManager.swift */,
-				6168099E1B4AFD4600883EEE /* Promos.swift */,
-				616809D01B4B957600883EEE /* carta.swift */,
+				617257CF1B574C1700D7786F /* productos.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		616809D21B4B985900883EEE /* Carta */ = {
-			isa = PBXGroup;
-			children = (
-				61E55E881B487F0D00BE9DB5 /* CartaTableViewController.swift */,
-				6180615E1B4C2D51008473C8 /* CartaTableViewCell.swift */,
-			);
-			name = Carta;
 			sourceTree = "<group>";
 		};
 		6172572B1B55AC4900D7786F /* Principal */ = {
 			isa = PBXGroup;
 			children = (
-				617257251B558B9400D7786F /* PrincipalViewController.swift */,
 				618062E71B4D6FBA008473C8 /* CarritoViewController.swift */,
+				617257251B558B9400D7786F /* PrincipalViewController.swift */,
 				617257271B5597C600D7786F /* PrincipalTableViewCell.swift */,
 				617257291B5597D500D7786F /* PrincipalCollectionViewCell.swift */,
 			);
@@ -328,7 +309,7 @@
 			children = (
 				618061F01B4CADB3008473C8 /* MapKit.framework */,
 				616808E61B4AFAEA00883EEE /* libsqlite3.dylib */,
-				616808E81B4AFB0200883EEE /* SupremaSalsa.sqlite */,
+				617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */,
 				61E55E001B46FC8D00BE9DB5 /* Suprema Salsa */,
 				61E55E181B46FC8D00BE9DB5 /* Suprema SalsaTests */,
 				61E55DFF1B46FC8D00BE9DB5 /* Products */,
@@ -347,12 +328,10 @@
 		61E55E001B46FC8D00BE9DB5 /* Suprema Salsa */ = {
 			isa = PBXGroup;
 			children = (
-				61E55E561B485B1B00BE9DB5 /* Suprema Salsa-Bridging-Header.h */,
 				61E55E091B46FC8D00BE9DB5 /* Main.storyboard */,
 				616808EA1B4AFB6600883EEE /* DataBase */,
 				61E55F061B49772200BE9DB5 /* SlideOutMenuControllers */,
 				6172572B1B55AC4900D7786F /* Principal */,
-				61E55F071B49775200BE9DB5 /* TabControllers */,
 				61E55E011B46FC8D00BE9DB5 /* Supporting Files */,
 			);
 			path = "Suprema Salsa";
@@ -406,6 +385,7 @@
 		61E55E5F1B485EA600BE9DB5 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				615274331B58BCCD003EAAAD /* tif.png */,
 				6172571D1B5589A400D7786F /* cross.png */,
 				6172571F1B5589B000D7786F /* carrito32x32.png */,
 				61E55E601B485EC200BE9DB5 /* carrito48x48.png */,
@@ -448,26 +428,6 @@
 			);
 			name = SlideOutMenuControllers;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		61E55F071B49775200BE9DB5 /* TabControllers */ = {
-			isa = PBXGroup;
-			children = (
-				616809D21B4B985900883EEE /* Carta */,
-				61E55E8A1B487F3600BE9DB5 /* EventosViewController.swift */,
-				61E55F081B49777E00BE9DB5 /* Promos */,
-			);
-			name = TabControllers;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		61E55F081B49777E00BE9DB5 /* Promos */ = {
-			isa = PBXGroup;
-			children = (
-				61E55E5C1B485D1E00BE9DB5 /* PromosTableViewController.swift */,
-				61E55E8E1B488F6300BE9DB5 /* PromosTableViewCell.swift */,
-			);
-			name = Promos;
 			sourceTree = "<group>";
 		};
 		61E55F091B49785B00BE9DB5 /* Launch */ = {
@@ -562,8 +522,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				618062241B4CDA1F008473C8 /* SupremaSalsa.sqlite in Resources */,
-				616808E11B4AEE7600883EEE /* aguaNatural.jpg in Resources */,
+				615274321B583562003EAAAD /* SupremaSalsa4.sqlite in Resources */,
+				617257D21B57575E00D7786F /* aguaNatural.jpg in Resources */,
 				61E55E731B4874AC00BE9DB5 /* map.png in Resources */,
 				61E55E651B48611D00BE9DB5 /* shopping48x48.png in Resources */,
 				61E55E711B48749D00BE9DB5 /* wishlist.png in Resources */,
@@ -573,15 +533,16 @@
 				61E55E771B4875A400BE9DB5 /* perfil_egresado.png in Resources */,
 				616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */,
 				61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */,
+				615274341B58BCCD003EAAAD /* tif.png in Resources */,
 				618061F31B4CB1B2008473C8 /* launchScreen.jpg in Resources */,
 				61E55E9A1B48925C00BE9DB5 /* cochinita1.jpg in Resources */,
 				61E55E671B48636700BE9DB5 /* capParty48x48.png in Resources */,
 				616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */,
 				61E55E791B4875EB00BE9DB5 /* settings.png in Resources */,
+				617257D81B576E7B00D7786F /* tacoDeBistek.jpg in Resources */,
 				61E55E7D1B48764A00BE9DB5 /* settings3.png in Resources */,
 				6180615C1B4C2B3C008473C8 /* palomita2.png in Resources */,
 				616808D31B4AECF900883EEE /* sincronizada.jpg in Resources */,
-				616808D71B4AED4300883EEE /* tacoDeBistek.png in Resources */,
 				61E55E9B1B48925C00BE9DB5 /* cochinita2.jpg in Resources */,
 				616808DD1B4AEDF900883EEE /* refresco.jpg in Resources */,
 				61E55E101B46FC8D00BE9DB5 /* LaunchScreen.xib in Resources */,
@@ -605,11 +566,11 @@
 				616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */,
 				61E55E751B4874BB00BE9DB5 /* comments.png in Resources */,
 				6172571E1B5589A400D7786F /* cross.png in Resources */,
-				616808D91B4AED7C00883EEE /* arrachera.png in Resources */,
 				61E55E0D1B46FC8D00BE9DB5 /* Images.xcassets in Resources */,
 				61E55E611B485EC200BE9DB5 /* carrito48x48.png in Resources */,
 				61E55E961B4891EC00BE9DB5 /* arabeKilo.jpg in Resources */,
 				6180615B1B4C2B3C008473C8 /* palomita1.png in Resources */,
+				616808D91B4AED7C00883EEE /* arrachera.png in Resources */,
 				6180615D1B4C2B3C008473C8 /* plus.png in Resources */,
 				61E55E6D1B48713900BE9DB5 /* perfil64x64.png in Resources */,
 				618061571B4C29C4008473C8 /* cheese.png in Resources */,
@@ -632,28 +593,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E55E041B46FC8D00BE9DB5 /* AppDelegate.swift in Sources */,
-				61E55E8B1B487F3600BE9DB5 /* EventosViewController.swift in Sources */,
 				61E55E851B4879D000BE9DB5 /* MapViewController.swift in Sources */,
 				617257281B5597C600D7786F /* PrincipalTableViewCell.swift in Sources */,
-				6180615F1B4C2D51008473C8 /* CartaTableViewCell.swift in Sources */,
 				616809931B4AFC9A00883EEE /* FMDatabase.m in Sources */,
-				6168099F1B4AFD4600883EEE /* Promos.swift in Sources */,
-				616809D11B4B957600883EEE /* carta.swift in Sources */,
 				61E55E871B4879F800BE9DB5 /* SettingsViewController.swift in Sources */,
 				6168099D1B4AFD0800883EEE /* ModelManager.swift in Sources */,
 				616809961B4AFC9A00883EEE /* FMDatabaseQueue.m in Sources */,
 				6168099C1B4AFD0800883EEE /* Util.swift in Sources */,
 				616809971B4AFC9A00883EEE /* FMResultSet.m in Sources */,
-				61E55E891B487F0D00BE9DB5 /* CartaTableViewController.swift in Sources */,
-				61E55E8F1B488F6300BE9DB5 /* PromosTableViewCell.swift in Sources */,
 				6172572A1B5597D500D7786F /* PrincipalCollectionViewCell.swift in Sources */,
 				616809941B4AFC9A00883EEE /* FMDatabaseAdditions.m in Sources */,
+				617257D01B574C1700D7786F /* productos.swift in Sources */,
 				61E55E591B485B1B00BE9DB5 /* SWRevealViewController.m in Sources */,
 				61E55E691B486DF000BE9DB5 /* PerfilViewController.swift in Sources */,
 				616809951B4AFC9A00883EEE /* FMDatabasePool.m in Sources */,
 				618062E81B4D6FBA008473C8 /* CarritoViewController.swift in Sources */,
 				61E55E831B4879A900BE9DB5 /* NewsTableViewController.swift in Sources */,
-				61E55E5D1B485D1E00BE9DB5 /* PromosTableViewController.swift in Sources */,
 				617257261B558B9400D7786F /* PrincipalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
