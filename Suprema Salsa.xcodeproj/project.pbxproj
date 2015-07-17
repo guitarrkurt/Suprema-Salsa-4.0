@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		615274321B583562003EAAAD /* SupremaSalsa4.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */; };
 		615274341B58BCCD003EAAAD /* tif.png in Resources */ = {isa = PBXBuildFile; fileRef = 615274331B58BCCD003EAAAD /* tif.png */; };
+		6156C56E1B59A8CA00E8E5C4 /* ima_vacia.png in Resources */ = {isa = PBXBuildFile; fileRef = 6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */; };
 		616808C31B4AE2C900883EEE /* jamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C21B4AE2C900883EEE /* jamaica.jpg */; };
 		616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C61B4AE64100883EEE /* unTacoPastor.jpg */; };
 		616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */; };
@@ -95,6 +96,7 @@
 
 /* Begin PBXFileReference section */
 		615274331B58BCCD003EAAAD /* tif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tif.png; sourceTree = "<group>"; };
+		6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima_vacia.png; sourceTree = "<group>"; };
 		616808C21B4AE2C900883EEE /* jamaica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jamaica.jpg; sourceTree = "<group>"; };
 		616808C61B4AE64100883EEE /* unTacoPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unTacoPastor.jpg; sourceTree = "<group>"; };
 		616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cincoTacosPastor.jpg; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		6172572C1B55AC9100D7786F /* Principal */ = {
 			isa = PBXGroup;
 			children = (
+				6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */,
 				618061561B4C29C4008473C8 /* cheese.png */,
 				618061581B4C2B3C008473C8 /* palomita1.png */,
 				618061591B4C2B3C008473C8 /* palomita2.png */,
@@ -528,6 +531,7 @@
 				61E55E651B48611D00BE9DB5 /* shopping48x48.png in Resources */,
 				61E55E711B48749D00BE9DB5 /* wishlist.png in Resources */,
 				616808CB1B4AE74400883EEE /* unTacoArabe.jpg in Resources */,
+				6156C56E1B59A8CA00E8E5C4 /* ima_vacia.png in Resources */,
 				61E55E7C1B48764A00BE9DB5 /* settings2.png in Resources */,
 				617257241B558AA500D7786F /* start.png in Resources */,
 				61E55E771B4875A400BE9DB5 /* perfil_egresado.png in Resources */,

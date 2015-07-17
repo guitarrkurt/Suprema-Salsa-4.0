@@ -375,42 +375,32 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZY8-87-PBZ">
-                                                    <rect key="frame" x="8" y="34" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yok-Lc-5SA">
-                                                    <rect key="frame" x="8" y="60" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v57-8G-i2f">
+                                                    <rect key="frame" x="55" y="68" width="34" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="B9s-Va-aqb"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="M4f-hq-WZf" secondAttribute="trailing" constant="18" id="0dw-Um-YQV"/>
-                                            <constraint firstItem="CtZ-8I-G6U" firstAttribute="leading" secondItem="1IT-8I-V42" secondAttribute="leadingMargin" constant="47" id="4Cq-eM-E5k"/>
-                                            <constraint firstItem="yok-Lc-5SA" firstAttribute="leading" secondItem="1IT-8I-V42" secondAttribute="leadingMargin" id="6Vi-bH-dT3"/>
-                                            <constraint firstItem="ZY8-87-PBZ" firstAttribute="leading" secondItem="M4f-hq-WZf" secondAttribute="leading" id="764-Ap-C7C"/>
-                                            <constraint firstItem="M4f-hq-WZf" firstAttribute="top" secondItem="1IT-8I-V42" secondAttribute="topMargin" constant="18" id="FN5-fP-6D7"/>
-                                            <constraint firstItem="yok-Lc-5SA" firstAttribute="bottom" secondItem="1IT-8I-V42" secondAttribute="bottomMargin" id="Ffc-Dl-bSk"/>
-                                            <constraint firstItem="CtZ-8I-G6U" firstAttribute="top" secondItem="1IT-8I-V42" secondAttribute="top" id="Hlf-cL-AdV"/>
-                                            <constraint firstItem="ZY8-87-PBZ" firstAttribute="top" secondItem="1IT-8I-V42" secondAttribute="topMargin" constant="26" id="I94-NH-rXX"/>
-                                            <constraint firstItem="ZY8-87-PBZ" firstAttribute="centerY" secondItem="1IT-8I-V42" secondAttribute="centerY" id="MOC-Ww-qMD"/>
-                                            <constraint firstItem="yok-Lc-5SA" firstAttribute="top" secondItem="ZY8-87-PBZ" secondAttribute="bottom" constant="5" id="Qn4-8v-iQ9"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="CtZ-8I-G6U" secondAttribute="bottom" constant="47" id="jHF-2J-pp0"/>
-                                            <constraint firstItem="ZY8-87-PBZ" firstAttribute="leading" secondItem="yok-Lc-5SA" secondAttribute="leading" id="krj-hr-khN"/>
-                                            <constraint firstItem="yok-Lc-5SA" firstAttribute="bottom" secondItem="M4f-hq-WZf" secondAttribute="bottom" id="sRi-84-Rlb"/>
-                                            <constraint firstAttribute="trailing" secondItem="CtZ-8I-G6U" secondAttribute="trailing" id="usQ-Z9-m66"/>
+                                            <constraint firstItem="v57-8G-i2f" firstAttribute="top" secondItem="CtZ-8I-G6U" secondAttribute="bottom" constant="34" id="1Sq-6R-9j7"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="M4f-hq-WZf" secondAttribute="trailing" constant="18" id="2Oz-Lf-yxC"/>
+                                            <constraint firstAttribute="bottom" secondItem="v57-8G-i2f" secondAttribute="bottom" id="3cM-gb-pIt"/>
+                                            <constraint firstItem="M4f-hq-WZf" firstAttribute="top" secondItem="1IT-8I-V42" secondAttribute="topMargin" constant="18" id="HJB-eN-mQh"/>
+                                            <constraint firstItem="M4f-hq-WZf" firstAttribute="leading" secondItem="1IT-8I-V42" secondAttribute="leadingMargin" id="WKZ-4Z-OKv"/>
+                                            <constraint firstItem="M4f-hq-WZf" firstAttribute="bottom" secondItem="1IT-8I-V42" secondAttribute="bottomMargin" id="XTN-ZT-60W"/>
+                                            <constraint firstItem="CtZ-8I-G6U" firstAttribute="leading" secondItem="1IT-8I-V42" secondAttribute="leadingMargin" constant="47" id="adb-8k-goQ"/>
+                                            <constraint firstItem="v57-8G-i2f" firstAttribute="leading" secondItem="CtZ-8I-G6U" secondAttribute="leading" id="ciK-7J-FHI"/>
+                                            <constraint firstItem="v57-8G-i2f" firstAttribute="trailing" secondItem="CtZ-8I-G6U" secondAttribute="trailing" id="gAL-QZ-Y3h"/>
+                                            <constraint firstAttribute="trailing" secondItem="v57-8G-i2f" secondAttribute="trailing" id="rYd-qG-0jO"/>
+                                            <constraint firstItem="CtZ-8I-G6U" firstAttribute="top" secondItem="1IT-8I-V42" secondAttribute="top" id="zQ2-99-6vq"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="botonCruz" destination="CtZ-8I-G6U" id="bPW-pn-xGY"/>
-                                            <outlet property="etiquetaCantidad" destination="yok-Lc-5SA" id="L6C-Zo-Tr6"/>
-                                            <outlet property="etiquetaCantidadQueso" destination="ZY8-87-PBZ" id="XAv-qA-mpL"/>
                                             <outlet property="imagen" destination="M4f-hq-WZf" id="WYN-T5-9WF"/>
+                                            <outlet property="imagenQueso" destination="v57-8G-i2f" id="9Xz-dv-ZLC"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -584,6 +574,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="KT9-At-BTt" id="brh-ZL-Dbt"/>
+                        <outlet property="myCollectionView" destination="kI1-aN-bRD" id="kCd-LI-bMa"/>
                         <outlet property="myTableView" destination="Ob7-TO-RCD" id="5er-Se-ScH"/>
                         <outlet property="segmentCarta" destination="mTW-dS-L4C" id="MUf-Re-6MB"/>
                         <outlet property="segmentPrincipal" destination="0Ss-38-aMS" id="ngy-hu-s7J"/>

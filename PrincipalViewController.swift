@@ -15,18 +15,24 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
     @IBOutlet weak var segmentPrincipal: UISegmentedControl!
     @IBOutlet weak var segmentCarta: UISegmentedControl!
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var myCollectionView: UICollectionView!
     
-    var arrayQuery    : NSMutableArray    =   NSMutableArray()
-    var producto      : productos         =   productos()
+    var arrayQuery     : NSMutableArray    =   NSMutableArray()
+    var producto       : productos         =   productos()
     
     //UPDATEs en botonFavoritosAction:
-    var IdP           : Int               = Int()
+    var IdP            : Int               = Int()
     //Persistencia Switches
-    var arraySwitches : NSMutableArray    = NSMutableArray()
+    var arraySwitches  : NSMutableArray    = NSMutableArray()
     //Persistencia Favoritos
-    var arrayFavoritos: NSMutableArray    = NSMutableArray()
+    var arrayFavoritos : NSMutableArray    = NSMutableArray()
 
-
+    /*----------Collection Carrito Compras------*/
+    var arrayCarrito            : NSMutableArray = NSMutableArray()
+    //persistencia Imagen Sub
+    var arraySubImageCarrito: NSMutableArray = NSMutableArray()
+    var index:Int = Int()
+    
     //MARK: Constructor
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,6 +151,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             //cell.botonFavoritos.setImage(UIImage(named: "tif.png"), forState: UIControlState.Normal)
             //Identificamos que este boton es TIF
             cell.botonFavoritos.tag = -1
+            //Agregar al carrito 🚗
+            cell.botonAgregar.tag   = producto.IdP
             
         }
         else if producto.Queso == 0{
@@ -158,6 +166,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             //cell.botonFavoritos.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
             //Pasamos el IdP de la celda
             cell.botonFavoritos.tag = producto.IdP
+            //Agregar al carrito 🚗
+            cell.botonAgregar.tag   = producto.IdP
             
             //Persistencia Favoritos toma DB y refleja
             if producto.Favorito == 1{
@@ -178,6 +188,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             //cell.botonFavoritos.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
             //Pasamos el IdP de la celda
             cell.botonFavoritos.tag = producto.IdP
+            //Agregar al carrito 🚗
+            cell.botonAgregar.tag   = producto.IdP
             
             //Persistencia Favoritos toma DB y refleja
             if producto.Favorito == 1{
@@ -208,13 +220,14 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             cell.`switch`.on = false
         }
         
-        //Agregar al carrito
+        //Agregar al carrito 🚗
         cell.botonAgregar.addTarget(self, action: "botonAgregarAction:", forControlEvents: .TouchUpInside)
         
         return cell
     }
     
     func switchAction(sender: UISwitch){
+        println("switchAction:")
         var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
         var indexPathOfSwitch = myTableView.indexPathForCell(theParentCell)
         
@@ -227,12 +240,6 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         
     }
 
-    func botonAgregarAction(sender: UIButton!){
-    
-        println("Agregar al carrito")
-    }
-    
-    
     func botonFavoritosAction(sender:UIButton!){
         var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
         var indexPathOfSwitch = myTableView.indexPathForCell(theParentCell)
@@ -279,7 +286,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
 
     }
     
-    
+
     
     
     
@@ -299,12 +306,29 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
     
     
     */
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int{
-        return 1
+    func botonAgregarAction(sender: UIButton!){
+        println("Agregar al carrito")
+        
+        //Obtenemos la celda que hizo clic
+        var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
+        var indexPathOfBotonAgregar = myTableView.indexPathForCell(theParentCell)
+        
+        //Verificamos si la celda tenia el switch queso prendido
+        if theParentCell.`switch`.on {
+            
+            arraySubImageCarrito.addObject("ON")
+        }else{
+            arraySubImageCarrito.addObject("OFF")
+        }
+        
+        producto = arrayQuery[indexPathOfBotonAgregar!.row] as! productos
+        arrayCarrito.addObject(producto)
+        
+        myCollectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return 1
+        return arrayCarrito.count
     }
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -312,10 +336,51 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("PrincipalCollectionViewCell", forIndexPath: indexPath) as! PrincipalCollectionViewCell
         
-            cell.imagen.image = UIImage(named: "chesee.png")
+            producto = arrayCarrito.objectAtIndex(indexPath.row) as! productos
+            //producto = arrayCarrito[indexPath.row] as! productos
+        
+        if (arraySubImageCarrito.objectAtIndex(indexPath.row) as! String) == "ON"{
+            
+            cell.imagenQueso.image = UIImage(named: "cheese.png")
+            cell.imagen.image = UIImage(named: producto.ImagenP)
+            
+        }else{
+            //NOTA: Es forzoso que lleve una imagen sino se pierde la PERSISTENCIA
+            cell.imagenQueso.image = UIImage(named: "ima_vacia.png")
+            cell.imagen.image = UIImage(named: producto.ImagenP)
+        
+        }
+        
+        //Identificamos que producto vamos a borrar
+            cell.botonCruz.tag = indexPath.row
+            cell.botonCruz.addTarget(self, action: "botonCruzAction:", forControlEvents: .TouchUpInside)
         return cell
         
     }
+    
+    func botonCruzAction(sender: UIButton){
+        println("Elimina producto")
+        
+        //Sender.tag trae el indice del producto
+        index = sender.tag
+        
+        arrayCarrito.removeObjectAtIndex(index)
+        arraySubImageCarrito.removeObjectAtIndex(index)
+        
+        myCollectionView.reloadData()
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     //MARK: Others
     override func didReceiveMemoryWarning() {
