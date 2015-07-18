@@ -26,12 +26,14 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
     var arraySwitches  : NSMutableArray    = NSMutableArray()
     //Persistencia Favoritos
     var arrayFavoritos : NSMutableArray    = NSMutableArray()
+    //Persistencia EtiquetaPrecio
+    var arrayPrecio    : NSMutableArray    = NSMutableArray()
 
     /*----------Collection Carrito Compras------*/
-    var arrayCarrito            : NSMutableArray = NSMutableArray()
+    var arrayCarrito            : NSMutableArray           = NSMutableArray()
     //persistencia Imagen Sub
-    var arraySubImageCarrito: NSMutableArray = NSMutableArray()
-    var index:Int = Int()
+    var arraySubImageCarrito    : NSMutableArray           = NSMutableArray()
+    var index                   :Int                       = Int()
     
     //MARK: Constructor
     override func viewDidLoad() {
@@ -49,7 +51,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         
     }
 
-    //MARK: Actions
+    //MARK: Segments
 
     @IBAction func segmentPrincipalAction(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex
@@ -109,26 +111,16 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         println("myTableView.reloadData() in segmentCartaAction")
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     //MARK: TableView Data Source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         //Persistencia Switches y Favoritos
         arraySwitches  = []
         arrayFavoritos = []
+        arrayPrecio    = []
         for var i = 0; i < arrayQuery.count; ++i{
             arraySwitches.addObject("")
             arrayFavoritos.addObject("")
+            arrayPrecio.addObject("")
         }
         //Numero de filas
         return arrayQuery.count
@@ -147,8 +139,10 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
 
             cell.imagen.image           = UIImage(named: producto.ImagenP)
             cell.etiquetaTitulo.text    = producto.NombreP
-            cell.etiquetaPrecio.text    = "$ \(producto.PrecioP)"
-            //cell.botonFavoritos.setImage(UIImage(named: "tif.png"), forState: UIControlState.Normal)
+            //cell.etiquetaPrecio.text    = "$ \(producto.PrecioP)"
+            //Persistencia etiquetaPrecio 💰
+            arrayPrecio.replaceObjectAtIndex(indexPath.row, withObject: "$ \(producto.PrecioP)")
+            arrayPrecio.addObject("\(producto.PrecioP)")
             //Identificamos que este boton es TIF
             cell.botonFavoritos.tag = -1
             //Agregar al carrito 🚗
@@ -162,8 +156,9 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             
             cell.imagen.image           = UIImage(named: producto.ImagenP)
             cell.etiquetaTitulo.text    = producto.NombreP
-            cell.etiquetaPrecio.text    = "$ \(producto.PrecioP)"
-            //cell.botonFavoritos.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
+            //cell.etiquetaPrecio.text    = "$ \(producto.PrecioP)"
+            //Persistencia etiquetaPrecio 💰
+            arrayPrecio.replaceObjectAtIndex(indexPath.row, withObject: "$ \(producto.PrecioP)")
             //Pasamos el IdP de la celda
             cell.botonFavoritos.tag = producto.IdP
             //Agregar al carrito 🚗
@@ -184,8 +179,28 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             
             cell.imagen.image           = UIImage(named: producto.ImagenP)
             cell.etiquetaTitulo.text    = producto.NombreP
-            cell.etiquetaPrecio.text    = "$ \(producto.PrecioP)"
-            //cell.botonFavoritos.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
+            //cell.etiquetaPrecio.text    = "$ \(producto.PrecioP)"
+            //Persistencia etiquetaPrecio 💰
+            //A pesar de que es posible que lleve Queso el Switch aun no se ha activado
+            //Por eso le pasamos el Precio corriente
+            
+
+            if (arraySwitches.objectAtIndex(indexPath.row) as! String) == "ON"{
+                cell.`switch`.on = true
+                
+                //Persistencia EtiquetaPrecio 💰
+                cell.etiquetaPrecio.text = arrayPrecio.objectAtIndex(indexPath.row) as? String
+                println("etiquetaPrecioGood: \(arrayPrecio.objectAtIndex(indexPath.row))")
+            }else{
+                cell.`switch`.on = false
+                
+                arrayPrecio.replaceObjectAtIndex(indexPath.row, withObject: "$ \(producto.PrecioP)")
+                //Persistencia EtiquetaPrecio 💰
+                cell.etiquetaPrecio.text = arrayPrecio.objectAtIndex(indexPath.row) as? String
+                println("etiquetaPrecioGood: \(arrayPrecio.objectAtIndex(indexPath.row))")
+            }
+            
+            
             //Pasamos el IdP de la celda
             cell.botonFavoritos.tag = producto.IdP
             //Agregar al carrito 🚗
@@ -201,7 +216,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         }
 
         //Persistencia Favoritos
-        cell.botonFavoritos.addTarget(self, action: "botonFavoritosAction:", forControlEvents: .TouchUpInside)
+            cell.botonFavoritos.addTarget(self, action: "botonFavoritosAction:", forControlEvents: .TouchUpInside)
         if (arrayFavoritos.objectAtIndex(indexPath.row) as! String) == "ON"{
             cell.botonFavoritos.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
         }else{
@@ -213,33 +228,57 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             }
         }
         //Persistencia Switches
-        cell.`switch`.addTarget(self, action: "switchAction:", forControlEvents: .ValueChanged)
+            cell.`switch`.addTarget(self, action: "switchAction:", forControlEvents: .ValueChanged)
         if (arraySwitches.objectAtIndex(indexPath.row) as! String) == "ON"{
             cell.`switch`.on = true
+            
+            //Persistencia EtiquetaPrecio 💰
+            cell.etiquetaPrecio.text = arrayPrecio.objectAtIndex(indexPath.row) as? String
+            println("etiquetaPrecioGood: \(arrayPrecio.objectAtIndex(indexPath.row))")
         }else{
             cell.`switch`.on = false
+            
+            //Persistencia EtiquetaPrecio 💰
+            cell.etiquetaPrecio.text = arrayPrecio.objectAtIndex(indexPath.row) as? String
+            println("etiquetaPrecioGood: \(arrayPrecio.objectAtIndex(indexPath.row))")
         }
         
+
+
+        
         //Agregar al carrito 🚗
-        cell.botonAgregar.addTarget(self, action: "botonAgregarAction:", forControlEvents: .TouchUpInside)
+            cell.botonAgregar.addTarget(self, action: "botonAgregarAction:", forControlEvents: .TouchUpInside)
         
         return cell
     }
     
+    //Switch target
     func switchAction(sender: UISwitch){
         println("switchAction:")
         var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
         var indexPathOfSwitch = myTableView.indexPathForCell(theParentCell)
         
+        producto = arrayQuery[indexPathOfSwitch!.row] as! productos
+        
         if sender.on {
             arraySwitches.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "ON")
+            //Modificamos el precio con Queso
+            theParentCell.etiquetaPrecio.text = "$ \(producto.PrecioQuesoP)"
+            arrayPrecio.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "$ \(producto.PrecioQuesoP)")
+            println("etiquetaPrecio: \(indexPathOfSwitch?.row): \(arrayPrecio.objectAtIndex(indexPathOfSwitch!.row))")
             
         }else{
             arraySwitches.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "OFF")
+            //Modificamos el precio sin Queso
+            theParentCell.etiquetaPrecio.text = "$ \(producto.PrecioP)"
+            arrayPrecio.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "$ \(producto.PrecioP)")
+            println("etiquetaPrecio: \(indexPathOfSwitch?.row): \(arrayPrecio.objectAtIndex(indexPathOfSwitch!.row))")
+            
         }
         
     }
 
+    //Favoritos Target
     func botonFavoritosAction(sender:UIButton!){
         var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
         var indexPathOfSwitch = myTableView.indexPathForCell(theParentCell)
@@ -285,27 +324,8 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         
 
     }
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    //MARK - CollectionView Data Source
-    /*
-    
-    
-    
-    
-    //El de abajo
-    
-    
-    
-    */
+    //AgregarCarrito Target
     func botonAgregarAction(sender: UIButton!){
         println("Agregar al carrito")
         
@@ -313,20 +333,28 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
         var indexPathOfBotonAgregar = myTableView.indexPathForCell(theParentCell)
         
+        producto = arrayQuery[indexPathOfBotonAgregar!.row] as! productos
+        
         //Verificamos si la celda tenia el switch queso prendido
         if theParentCell.`switch`.on {
             
             arraySubImageCarrito.addObject("ON")
+            producto.QuesoOnP = 1
+            ModelManager.instance.updateQuesoOn(producto.IdP)
         }else{
             arraySubImageCarrito.addObject("OFF")
+            producto.QuesoOnP = 0
+            ModelManager.instance.updateQuesoOFF(producto.IdP)
         }
         
-        producto = arrayQuery[indexPathOfBotonAgregar!.row] as! productos
+
         arrayCarrito.addObject(producto)
         
         myCollectionView.reloadData()
     }
     
+    
+    //MARK: CollectionView Data Source
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return arrayCarrito.count
     }
@@ -378,8 +406,22 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
     
     
     
+    @IBAction func enviarCarrito(sender: UIBarButtonItem) {
+        if(arrayCarrito.count == 0){
+            let alertView = UIAlertView(title: "Suprema Salsa", message: "Añada algo al carrito 🍴", delegate: nil, cancelButtonTitle: "☑️ Ok")
+            alertView.show()
+        }else{
+            performSegueWithIdentifier("carritoIdentifier", sender: self)
+        }
+
+    }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "carritoIdentifier" {
+                (segue.destinationViewController as! CarritoViewController).arrayCarrito = arrayCarrito
+        }
+    }
     
 
     //MARK: Others

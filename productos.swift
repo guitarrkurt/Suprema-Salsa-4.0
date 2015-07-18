@@ -21,5 +21,6 @@ class productos: NSObject {
     var Bebida      : Int    = Int()
     var Promo       : Int    = Int()
     var ImagenP     : String = String()
+    var QuesoOnP    : Int    = Int()
 
 }

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615274321B583562003EAAAD /* SupremaSalsa4.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */; };
+		615274321B583562003EAAAD /* SupremaSalsa5.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 617257D51B576BA200D7786F /* SupremaSalsa5.sqlite */; };
 		615274341B58BCCD003EAAAD /* tif.png in Resources */ = {isa = PBXBuildFile; fileRef = 615274331B58BCCD003EAAAD /* tif.png */; };
 		6156C56E1B59A8CA00E8E5C4 /* ima_vacia.png in Resources */ = {isa = PBXBuildFile; fileRef = 6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */; };
+		6156C5731B5A04AF00E8E5C4 /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = 6156C5721B5A04AF00E8E5C4 /* scissors.png */; };
+		6156C5751B5A060300E8E5C4 /* plusOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 6156C5741B5A060300E8E5C4 /* plusOrange.png */; };
 		616808C31B4AE2C900883EEE /* jamaica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C21B4AE2C900883EEE /* jamaica.jpg */; };
 		616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C61B4AE64100883EEE /* unTacoPastor.jpg */; };
 		616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */; };
@@ -97,6 +99,8 @@
 /* Begin PBXFileReference section */
 		615274331B58BCCD003EAAAD /* tif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tif.png; sourceTree = "<group>"; };
 		6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima_vacia.png; sourceTree = "<group>"; };
+		6156C5721B5A04AF00E8E5C4 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = "<group>"; };
+		6156C5741B5A060300E8E5C4 /* plusOrange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusOrange.png; sourceTree = "<group>"; };
 		616808C21B4AE2C900883EEE /* jamaica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jamaica.jpg; sourceTree = "<group>"; };
 		616808C61B4AE64100883EEE /* unTacoPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unTacoPastor.jpg; sourceTree = "<group>"; };
 		616808C81B4AE6CC00883EEE /* cincoTacosPastor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cincoTacosPastor.jpg; sourceTree = "<group>"; };
@@ -135,7 +139,7 @@
 		617257271B5597C600D7786F /* PrincipalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewCell.swift; sourceTree = "<group>"; };
 		617257291B5597D500D7786F /* PrincipalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionViewCell.swift; sourceTree = "<group>"; };
 		617257CF1B574C1700D7786F /* productos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = productos.swift; sourceTree = "<group>"; };
-		617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SupremaSalsa4.sqlite; sourceTree = "<group>"; };
+		617257D51B576BA200D7786F /* SupremaSalsa5.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SupremaSalsa5.sqlite; sourceTree = "<group>"; };
 		617257D71B576E7B00D7786F /* tacoDeBistek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tacoDeBistek.jpg; sourceTree = "<group>"; };
 		618061561B4C29C4008473C8 /* cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cheese.png; path = ../cheese.png; sourceTree = "<group>"; };
 		618061581B4C2B3C008473C8 /* palomita1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = palomita1.png; path = ../palomita1.png; sourceTree = "<group>"; };
@@ -204,6 +208,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6156C56F1B59AC5C00E8E5C4 /* Carrito */ = {
+			isa = PBXGroup;
+			children = (
+				618062E71B4D6FBA008473C8 /* CarritoViewController.swift */,
+			);
+			name = Carrito;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		616808C41B4AE62D00883EEE /* Promos */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +297,6 @@
 		6172572B1B55AC4900D7786F /* Principal */ = {
 			isa = PBXGroup;
 			children = (
-				618062E71B4D6FBA008473C8 /* CarritoViewController.swift */,
 				617257251B558B9400D7786F /* PrincipalViewController.swift */,
 				617257271B5597C600D7786F /* PrincipalTableViewCell.swift */,
 				617257291B5597D500D7786F /* PrincipalCollectionViewCell.swift */,
@@ -312,7 +324,7 @@
 			children = (
 				618061F01B4CADB3008473C8 /* MapKit.framework */,
 				616808E61B4AFAEA00883EEE /* libsqlite3.dylib */,
-				617257D51B576BA200D7786F /* SupremaSalsa4.sqlite */,
+				617257D51B576BA200D7786F /* SupremaSalsa5.sqlite */,
 				61E55E001B46FC8D00BE9DB5 /* Suprema Salsa */,
 				61E55E181B46FC8D00BE9DB5 /* Suprema SalsaTests */,
 				61E55DFF1B46FC8D00BE9DB5 /* Products */,
@@ -335,6 +347,7 @@
 				616808EA1B4AFB6600883EEE /* DataBase */,
 				61E55F061B49772200BE9DB5 /* SlideOutMenuControllers */,
 				6172572B1B55AC4900D7786F /* Principal */,
+				6156C56F1B59AC5C00E8E5C4 /* Carrito */,
 				61E55E011B46FC8D00BE9DB5 /* Supporting Files */,
 			);
 			path = "Suprema Salsa";
@@ -388,6 +401,8 @@
 		61E55E5F1B485EA600BE9DB5 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				6156C5741B5A060300E8E5C4 /* plusOrange.png */,
+				6156C5721B5A04AF00E8E5C4 /* scissors.png */,
 				615274331B58BCCD003EAAAD /* tif.png */,
 				6172571D1B5589A400D7786F /* cross.png */,
 				6172571F1B5589B000D7786F /* carrito32x32.png */,
@@ -525,7 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615274321B583562003EAAAD /* SupremaSalsa4.sqlite in Resources */,
+				615274321B583562003EAAAD /* SupremaSalsa5.sqlite in Resources */,
 				617257D21B57575E00D7786F /* aguaNatural.jpg in Resources */,
 				61E55E731B4874AC00BE9DB5 /* map.png in Resources */,
 				61E55E651B48611D00BE9DB5 /* shopping48x48.png in Resources */,
@@ -542,6 +557,7 @@
 				61E55E9A1B48925C00BE9DB5 /* cochinita1.jpg in Resources */,
 				61E55E671B48636700BE9DB5 /* capParty48x48.png in Resources */,
 				616808C91B4AE6CC00883EEE /* cincoTacosPastor.jpg in Resources */,
+				6156C5751B5A060300E8E5C4 /* plusOrange.png in Resources */,
 				61E55E791B4875EB00BE9DB5 /* settings.png in Resources */,
 				617257D81B576E7B00D7786F /* tacoDeBistek.jpg in Resources */,
 				61E55E7D1B48764A00BE9DB5 /* settings3.png in Resources */,
@@ -567,6 +583,7 @@
 				61E55E631B48602300BE9DB5 /* tenedorYCuchillo48x48.png in Resources */,
 				61E55E971B4891EC00BE9DB5 /* arabeTacos.jpeg in Resources */,
 				61E55E7F1B48784D00BE9DB5 /* logout.jpg in Resources */,
+				6156C5731B5A04AF00E8E5C4 /* scissors.png in Resources */,
 				616808C71B4AE64100883EEE /* unTacoPastor.jpg in Resources */,
 				61E55E751B4874BB00BE9DB5 /* comments.png in Resources */,
 				6172571E1B5589A400D7786F /* cross.png in Resources */,

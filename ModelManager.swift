@@ -15,8 +15,8 @@ class ModelManager: NSObject {
     var database: FMDatabase? = nil
     
     class var instance: ModelManager {
-        sharedInstance.database = FMDatabase(path: Util.getPath("SupremaSalsa4.sqlite"))
-        var path = Util.getPath("SupremaSalsa4.sqlite")
+        sharedInstance.database = FMDatabase(path: Util.getPath("SupremaSalsa5.sqlite"))
+        var path = Util.getPath("SupremaSalsa5.sqlite")
         println("path DB: \(path)")
         return sharedInstance
     }
@@ -69,6 +69,9 @@ class ModelManager: NSObject {
                 
                 instancia.ImagenP      = resultSet.stringForColumn("ImagenP")
                 println("ImagenP: \(instancia.ImagenP)")
+                
+                instancia.QuesoOnP      = (resultSet.stringForColumn("QuesoOnP") as NSString).integerValue
+                println("QuesoOnP: \(instancia.QuesoOnP)")
                 
                 array.addObject(instancia)
             }
@@ -167,6 +170,9 @@ class ModelManager: NSObject {
                 instancia.ImagenP      = resultSet.stringForColumn("ImagenP")
                 println("ImagenP: \(instancia.ImagenP)")
                 
+                instancia.QuesoOnP      = (resultSet.stringForColumn("QuesoOnP") as NSString).integerValue
+                println("QuesoOnP: \(instancia.QuesoOnP)")
+                
                 array.addObject(instancia)
             }
             
@@ -216,6 +222,9 @@ class ModelManager: NSObject {
                 
                 instancia.ImagenP      = resultSet.stringForColumn("ImagenP")
                 println("ImagenP: \(instancia.ImagenP)")
+                
+                instancia.QuesoOnP      = (resultSet.stringForColumn("QuesoOnP") as NSString).integerValue
+                println("QuesoOnP: \(instancia.QuesoOnP)")
                 
                 array.addObject(instancia)
             }
@@ -323,6 +332,9 @@ class ModelManager: NSObject {
                 instancia.ImagenP      = resultSet.stringForColumn("ImagenP")
                 println("ImagenP: \(instancia.ImagenP)")
                 
+                instancia.QuesoOnP      = (resultSet.stringForColumn("QuesoOnP") as NSString).integerValue
+                println("QuesoOnP: \(instancia.QuesoOnP)")
+                
                 array.addObject(instancia)
             }
             
@@ -360,5 +372,26 @@ class ModelManager: NSObject {
         sharedInstance.database!.close()
     }
     
+    func updateQuesoOn(IdP: Int){
+        var query = "UPDATE productos SET QuesoOn=1 WHERE IdP=\(IdP)"
+        println("\nquery: \(query)")
+        
+        sharedInstance.database!.open()
+        
+        sharedInstance.database!.executeUpdate(query, withArgumentsInArray:nil)
+        
+        sharedInstance.database!.close()
+    }
+    
+    func updateQuesoOFF(IdP: Int){
+        var query = "UPDATE productos SET QuesoOn=0 WHERE IdP=\(IdP)"
+        println("\nquery: \(query)")
+        
+        sharedInstance.database!.open()
+        
+        sharedInstance.database!.executeUpdate(query, withArgumentsInArray:nil)
+        
+        sharedInstance.database!.close()
+    }
     
 }

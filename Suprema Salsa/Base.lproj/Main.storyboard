@@ -570,7 +570,11 @@
                                 <action selector="segmentPrincipalAction:" destination="r2h-oQ-tIn" eventType="valueChanged" id="1mG-gd-pIn"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" image="carrito32x32.png" id="3A0-vJ-JvL"/>
+                        <barButtonItem key="rightBarButtonItem" image="carrito32x32.png" id="3A0-vJ-JvL">
+                            <connections>
+                                <action selector="enviarCarrito:" destination="r2h-oQ-tIn" id="upb-Zk-Bx3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="KT9-At-BTt" id="brh-ZL-Dbt"/>
@@ -578,11 +582,121 @@
                         <outlet property="myTableView" destination="Ob7-TO-RCD" id="5er-Se-ScH"/>
                         <outlet property="segmentCarta" destination="mTW-dS-L4C" id="MUf-Re-6MB"/>
                         <outlet property="segmentPrincipal" destination="0Ss-38-aMS" id="ngy-hu-s7J"/>
+                        <segue destination="DhK-KP-CqK" kind="show" identifier="carritoIdentifier" id="SoV-Mw-cNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxM-fK-QWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2128" y="1602"/>
+        </scene>
+        <!--Carrito View Controller-->
+        <scene sceneID="oBt-V1-SFX">
+            <objects>
+                <viewController id="DhK-KP-CqK" customClass="CarritoViewController" customModule="Suprema_Salsa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I5X-GN-fK3"/>
+                        <viewControllerLayoutGuide type="bottom" id="mdK-bY-PNQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7hG-yt-DVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xHt-lJ-wmg">
+                                <rect key="frame" x="0.0" y="64" width="605" height="303"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="carritoCellIdentifier" textLabel="DPw-wH-enq" detailTextLabel="7Au-2q-fh4" rowHeight="55" style="IBUITableViewCellStyleValue1" id="o5a-3f-Sx5">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o5a-3f-Sx5" id="9Ew-GY-DO8">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DPw-wH-enq">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Au-2q-fh4">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DhK-KP-CqK" id="cp1-z4-oHX"/>
+                                    <outlet property="delegate" destination="DhK-KP-CqK" id="d4H-DA-7DM"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI4-bh-rn6">
+                                <rect key="frame" x="0.0" y="511" width="600" height="89"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="qJJ-aU-uIC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="tintColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="✅Comprar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="compraEfectivoAction:" destination="DhK-KP-CqK" eventType="touchUpInside" id="wXU-UU-Dcc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-7h-yWs">
+                                <rect key="frame" x="21" y="367" width="563" height="144"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aca-jd-Nuj">
+                                <rect key="frame" x="16" y="394" width="88" height="89"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="Frt-Cm-hHn"/>
+                                    <constraint firstAttribute="width" constant="88" id="mRt-SQ-NVu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botonCuponAction:" destination="DhK-KP-CqK" eventType="touchUpInside" id="mDh-Z5-7ms"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EI4-bh-rn6" firstAttribute="bottom" secondItem="mdK-bY-PNQ" secondAttribute="top" id="3Wo-VJ-dBd"/>
+                            <constraint firstItem="Kmb-7h-yWs" firstAttribute="top" secondItem="xHt-lJ-wmg" secondAttribute="bottom" id="4jN-NO-hTp"/>
+                            <constraint firstItem="EI4-bh-rn6" firstAttribute="top" secondItem="aca-jd-Nuj" secondAttribute="bottom" constant="28" id="5IT-ve-hrD"/>
+                            <constraint firstItem="EI4-bh-rn6" firstAttribute="leading" secondItem="7hG-yt-DVQ" secondAttribute="leading" id="DQz-pN-0c0"/>
+                            <constraint firstItem="EI4-bh-rn6" firstAttribute="top" secondItem="Kmb-7h-yWs" secondAttribute="bottom" id="GHm-JS-3vf"/>
+                            <constraint firstItem="aca-jd-Nuj" firstAttribute="leading" secondItem="7hG-yt-DVQ" secondAttribute="leadingMargin" id="Gic-s6-WCv"/>
+                            <constraint firstAttribute="trailing" secondItem="EI4-bh-rn6" secondAttribute="trailing" id="JO7-FR-arM"/>
+                            <constraint firstItem="Kmb-7h-yWs" firstAttribute="trailing" secondItem="7hG-yt-DVQ" secondAttribute="trailingMargin" id="JkR-fW-fJI"/>
+                            <constraint firstItem="xHt-lJ-wmg" firstAttribute="top" secondItem="I5X-GN-fK3" secondAttribute="bottom" id="SzV-sf-us4"/>
+                            <constraint firstItem="EI4-bh-rn6" firstAttribute="leading" secondItem="xHt-lJ-wmg" secondAttribute="leading" id="jpJ-3D-eBj"/>
+                            <constraint firstItem="xHt-lJ-wmg" firstAttribute="centerX" secondItem="Kmb-7h-yWs" secondAttribute="centerX" id="sYT-tw-sta"/>
+                            <constraint firstItem="aca-jd-Nuj" firstAttribute="top" secondItem="xHt-lJ-wmg" secondAttribute="bottom" constant="27" id="uTw-mV-itx"/>
+                            <constraint firstItem="Kmb-7h-yWs" firstAttribute="leading" secondItem="7hG-yt-DVQ" secondAttribute="leadingMargin" constant="5" id="vPs-7R-eLs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botonCompraEfectivo" destination="EI4-bh-rn6" id="wAY-YU-hiw"/>
+                        <outlet property="botonCupon" destination="aca-jd-Nuj" id="c7B-zm-1bd"/>
+                        <outlet property="etiquetaTotal" destination="Kmb-7h-yWs" id="uBF-eS-6E0"/>
+                        <outlet property="myTableView" destination="xHt-lJ-wmg" id="Ncm-MA-vga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5W-zV-zCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877" y="1602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WAm-gL-zc9">
@@ -689,6 +803,6 @@
         <image name="wishlist.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3qA-78-s7l"/>
+        <segue reference="s2h-QO-gn6"/>
     </inferredMetricsTieBreakers>
 </document>
