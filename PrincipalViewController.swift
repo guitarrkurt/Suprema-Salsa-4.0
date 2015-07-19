@@ -29,6 +29,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
     //Persistencia EtiquetaPrecio
     var arrayPrecio    : NSMutableArray    = NSMutableArray()
 
+
     /*----------Collection Carrito Compras------*/
     var arrayCarrito            : NSMutableArray           = NSMutableArray()
     //persistencia Imagen Sub
@@ -101,6 +102,7 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             break;
         //Bebida
         case 4:
+            println("bebidas")
             arrayQuery = []
             arrayQuery = ModelManager.instance.selectBebidas()
             break;
@@ -130,10 +132,10 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
         let cell = tableView.dequeueReusableCellWithIdentifier("PrincipalTableViewCell", forIndexPath: indexPath) as! PrincipalTableViewCell
         
         producto = arrayQuery[indexPath.row] as! productos
-
+        println("\(producto.NombreP)")
         //Si el producto NO usa Queso y es Promo oculta el queso y como es Promo en ves de estrella lleva un TIF
         if producto.Queso == 0 && producto.Promo == 1{
-            println("NO lleva Queso y SI es Promo")
+            println("NO lleva Queso y SI es Promo 🍖")
             cell.`switch`.hidden = true
             cell.queso.hidden    = true
 
@@ -164,11 +166,13 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             //Agregar al carrito 🚗
             cell.botonAgregar.tag   = producto.IdP
             
-            //Persistencia Favoritos toma DB y refleja
+            //Persistencia Favoritos toma DB y refleja ⭐️
             if producto.Favorito == 1{
                 arrayFavoritos.replaceObjectAtIndex(indexPath.row, withObject: "ON")
+                println("Solo NO lleva Queso y NO es Promo FAVORITO ON)")
             }else{
                 arrayFavoritos.replaceObjectAtIndex(indexPath.row, withObject: "OFF")
+                println("Solo NO lleva Queso y NO es Promo FAVORITO OFF)")
             }
             
         }
@@ -206,11 +210,13 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             //Agregar al carrito 🚗
             cell.botonAgregar.tag   = producto.IdP
             
-            //Persistencia Favoritos toma DB y refleja
+            //Persistencia Favoritos toma DB y refleja ⭐️
             if producto.Favorito == 1{
                 arrayFavoritos.replaceObjectAtIndex(indexPath.row, withObject: "ON")
+                println("Producto que SI lleva Queso FAVORITO ON")
             }else{
                 arrayFavoritos.replaceObjectAtIndex(indexPath.row, withObject: "OFF")
+                println("Producto que SI lleva Queso FAVORITO OFF")
             }
 
         }
@@ -219,12 +225,15 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
             cell.botonFavoritos.addTarget(self, action: "botonFavoritosAction:", forControlEvents: .TouchUpInside)
         if (arrayFavoritos.objectAtIndex(indexPath.row) as! String) == "ON"{
             cell.botonFavoritos.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
+            println("\(producto.NombreP) Favoritos Star ON")
         }else{
             if cell.botonFavoritos.tag == -1{
                 
                 cell.botonFavoritos.setImage(UIImage(named: "tif.png"), forState: UIControlState.Normal)
+                println("Favoritos TIF")
             }else{
                 cell.botonFavoritos.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
+                println("\(producto.NombreP) Favoritos Star OFF")
             }
         }
         //Persistencia Switches
@@ -280,8 +289,9 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
 
     //Favoritos Target
     func botonFavoritosAction(sender:UIButton!){
+        println("Entra al target Favoritos")
         var theParentCell = (sender.superview?.superview as! PrincipalTableViewCell)
-        var indexPathOfSwitch = myTableView.indexPathForCell(theParentCell)
+        var indexPathOfFavoritos = myTableView.indexPathForCell(theParentCell)
 
         //Si es tif
         if sender.tag == -1{
@@ -291,33 +301,105 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
                 alertView.show()
         }else{
             IdP = sender.tag
-            //Si esta seleccionado SegmentControlFavoritos⭐️ eliminamos la celda de la tabla
-            if segmentCarta.selectedSegmentIndex == 1{
-                println("Boton Favorito 🌠Desactivado")
-                ModelManager.instance.updateFavoritoOFF(IdP)
-                sender.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
-                //Persistencia
-                arrayFavoritos.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "OFF")
-                
-                arrayQuery = []
-                arrayQuery = ModelManager.instance.selectFavoritos()
-                myTableView.reloadData()
-            }else{
-                
-                if  (arrayFavoritos.objectAtIndex(indexPathOfSwitch!.row) as! String) == "ON"{
+            //Todos
+            if segmentCarta.selectedSegmentIndex == 0{
+                /*************************************/
+                if  (arrayFavoritos.objectAtIndex(indexPathOfFavoritos!.row) as! String) == "ON"{
+                    
                     println("Boton Favorito 🌠Desactivado")
                     ModelManager.instance.updateFavoritoOFF(IdP)
                     sender.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
                     //Persistencia
-                    arrayFavoritos.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "OFF")
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "OFF")
+    
                 }else{
                     println("Boton Favorito ⭐️Activado")
                     ModelManager.instance.updateFavoritoON(IdP)
                     sender.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
                     //Persistencia
-                    arrayFavoritos.replaceObjectAtIndex(indexPathOfSwitch!.row, withObject: "ON")
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "ON")
                 }
-                
+                arrayQuery = []
+                arrayQuery = ModelManager.instance.selectTodo()
+                /***************************************/
+            }
+            //Si esta seleccionado SegmentControlFavoritos⭐️ eliminamos la celda de la tabla
+            else if segmentCarta.selectedSegmentIndex == 1{
+                println("Boton Favorito 🌠Desactivado")
+                ModelManager.instance.updateFavoritoOFF(IdP)
+                sender.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
+                //Persistencia
+                arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "OFF")
+                //Elimina la celda de la tabla
+                arrayQuery = []
+                arrayQuery = ModelManager.instance.selectFavoritos()
+                myTableView.reloadData()
+            }
+            //Pastor
+            else if segmentCarta.selectedSegmentIndex == 2{
+                /*************************************/
+                if  (arrayFavoritos.objectAtIndex(indexPathOfFavoritos!.row) as! String) == "ON"{
+                    
+                    println("Boton Favorito 🌠Desactivado")
+                    ModelManager.instance.updateFavoritoOFF(IdP)
+                    sender.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
+                    //Persistencia
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "OFF")
+                    
+                }else{
+                    println("Boton Favorito ⭐️Activado")
+                    ModelManager.instance.updateFavoritoON(IdP)
+                    sender.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
+                    //Persistencia
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "ON")
+                }
+                arrayQuery = []
+                arrayQuery = ModelManager.instance.selectPastor()
+                /***************************************/
+            }
+            //Arabe
+            else if segmentCarta.selectedSegmentIndex == 3{
+                /*************************************/
+                if  (arrayFavoritos.objectAtIndex(indexPathOfFavoritos!.row) as! String) == "ON"{
+                    
+                    println("Boton Favorito 🌠Desactivado")
+                    ModelManager.instance.updateFavoritoOFF(IdP)
+                    sender.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
+                    //Persistencia
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "OFF")
+                    
+                }else{
+                    println("Boton Favorito ⭐️Activado")
+                    ModelManager.instance.updateFavoritoON(IdP)
+                    sender.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
+                    //Persistencia
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "ON")
+                }
+                arrayQuery = []
+                arrayQuery = ModelManager.instance.selectArabe()
+                /***************************************/
+            }
+            //Bebidas
+            else if segmentCarta.selectedSegmentIndex == 4{
+                /*************************************/
+                if  (arrayFavoritos.objectAtIndex(indexPathOfFavoritos!.row) as! String) == "ON"{
+                    
+                    println("Boton Favorito 🌠Desactivado")
+                    ModelManager.instance.updateFavoritoOFF(IdP)
+                    sender.setImage(UIImage(named: "startWhite.png"), forState: UIControlState.Normal)
+                    //Persistencia
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "OFF")
+                    
+                }else{
+                    println("Boton Favorito ⭐️Activado")
+                    ModelManager.instance.updateFavoritoON(IdP)
+                    sender.setImage(UIImage(named: "start.png"), forState: UIControlState.Normal)
+                    //Persistencia
+                    arrayFavoritos.replaceObjectAtIndex(indexPathOfFavoritos!.row, withObject: "ON")
+                }
+                arrayQuery = []
+                arrayQuery = ModelManager.instance.selectBebidas()
+                /***************************************/
             }
 
         }
