@@ -31,39 +31,55 @@ class NewsTableViewController: UITableViewController {
     
     // MARK: - Refreshing
     @IBAction func refreshing(sender: UIRefreshControl) {
+        
         //Limpiamos los arrays
         arrayJson  = []
         imageStringArray = []
         tituloArray = []
         bodyArray = []
         precioArray = []
+        
+        if InternetHer() == true{
+        
+            //dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            refresh()
+            //self.tableView.reloadData()
+            //})
+            self.tableView.reloadData()
+        
+        }
 
-        //dispatch_async(dispatch_get_main_queue(), { () -> Void in
-        refresh()
-        //self.tableView.reloadData()
-        //})
-        
-        
-        self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
     // MARK: - Constructor
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+
+        if InternetHer() == true{
         
+            recievedData = NSMutableData(capacity: 0)
+            let url     : NSURL               = NSURL(string: "http://supremasalsa.azurewebsites.net/movil/promo.php")!
+            let request : NSMutableURLRequest = NSMutableURLRequest(URL: url)
+            request.HTTPMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            let conn    : NSURLConnection     = NSURLConnection(request: request, delegate: self)!
         
-        recievedData = NSMutableData(capacity: 0)
-        let url     : NSURL               = NSURL(string: "http://supremasalsa.azurewebsites.net/movil/promo.php")!
-        let request : NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let conn    : NSURLConnection     = NSURLConnection(request: request, delegate: self)!
+        }else{
+        
+            //Alerta
+            let alert = UIAlertView()
+            alert.title = "Cupones requiere Internet ⚠️"
+            alert.message = "Verifica tu conexión a internet activando tus datos moviles o desde Configuración -> WiFi en tu dispositivo 📲"
+            alert.addButtonWithTitle("Ok")
+            alert.show()
+        }
+
     }
 
     // MARK: - Conexion Asincrona
@@ -276,7 +292,32 @@ class NewsTableViewController: UITableViewController {
             break;
         }
     }
-
+    
+    func InternetHer ()->Bool{
+        var Status:Bool = false
+        let url = NSURL(string: "http://www.google.com")
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "HEAD"
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
+        
+        request.timeoutInterval = 10.0
+        
+        var response: NSURLResponse?
+        
+        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
+            as NSData?
+        
+        if let httpResponse = response as? NSHTTPURLResponse{
+            if httpResponse.statusCode == 200{
+                Status=true
+            }
+            
+        }
+        
+        return Status
+        
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -167,7 +167,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource {
             }else{
                 //Alerta
                 let alert = UIAlertView()
-                alert.title = "No hay Internet ⚠️"
+                alert.title = "Cupones requiere Internet ⚠️"
                 alert.message = "Verifica tu conexión a internet activando tus datos moviles o desde Configuración -> WiFi en tu dispositivo 📲"
                 alert.addButtonWithTitle("Ok")
                 alert.show()
