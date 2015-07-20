@@ -501,7 +501,10 @@ class PrincipalViewController: UIViewController, UITableViewDataSource, UICollec
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "carritoIdentifier" {
-                (segue.destinationViewController as! CarritoViewController).arrayCarrito = arrayCarrito
+                /*(segue.destinationViewController as! CarritoViewController).arrayCarrito = arrayCarrito*/
+                let nav = (segue.destinationViewController as! UINavigationController)
+                let event = (nav.topViewController as! CarritoViewController)
+                event.arrayCarrito   = arrayCarrito
         }
     }
     

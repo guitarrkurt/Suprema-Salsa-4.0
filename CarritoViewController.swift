@@ -16,22 +16,20 @@ class CarritoViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var etiquetaTotal: UILabel!
     @IBOutlet weak var botonCupon: UIButton!
     
-    var arrayCarrito: NSMutableArray = NSMutableArray()
-    var arrayEnviar : NSMutableArray = NSMutableArray()
-    var producto    : productos      = productos()
-    var titulo      : String         = String()
-    var detalle     : String         = String()
-    var total       : Float          = Float()
+    var arrayCarrito    : NSMutableArray = NSMutableArray()
+    var arrayEnviar     : NSMutableArray = NSMutableArray()
+    var producto        : productos      = productos()
+    var titulo          : String         = String()
+    var detalle         : String         = String()
+    var total           : Float          = Float()
+    var arrayCuponInfo  : NSMutableArray = NSMutableArray()
+    
+    var banderaOnceBotonCupon: Bool           = false
     
     //MARK: Constructor
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Bordes del botonCupon
-        botonCupon.layer.cornerRadius = 5
-        botonCupon.layer.borderWidth = 1
-        botonCupon.layer.borderColor = UIColor.orangeColor().CGColor
-        
         //Hacemos el LOOP FOR por un tes donde al hacer SCROLL UP el precio incrementa
         for var index=0; index < arrayCarrito.count; ++index{
             
@@ -61,6 +59,21 @@ class CarritoViewController: UIViewController, UITableViewDataSource {
         
         //Etiqueta con el total
         etiquetaTotal.text = "Total: $ \(total)"
+        
+        
+        //FROM NewsTableViewController (CUPONES)
+        if arrayCuponInfo.count != 0 {
+            println("entra arrayCupon")
+            //Boton Cupon
+            var imagen = arrayCuponInfo.objectAtIndex(0) as! UIImage
+            botonCupon.setImage(imagen, forState: .Normal)
+            //Etiqueta total
+            var precioConCupon = total - (arrayCuponInfo.objectAtIndex(2) as! NSString).floatValue
+            etiquetaTotal.text = "Antes: $ \(total) - Cupon: \' \(arrayCuponInfo.objectAtIndex(1) as! String) \'\nTotal: $ \(precioConCupon) "
+            //Precio From Cupon
+            
+            arrayCuponInfo = []
+        }
 
     }
 
@@ -99,9 +112,7 @@ class CarritoViewController: UIViewController, UITableViewDataSource {
     }
     
     //MARK: Buttons Actions
-    @IBAction func botonCuponAction(sender: UIButton) {
 
-    }
     
     @IBAction func compraEfectivoAction(sender: UIButton) {
         //Alerta
@@ -144,10 +155,68 @@ class CarritoViewController: UIViewController, UITableViewDataSource {
     
     
     
+    @IBAction func botonCuponAction(sender: UIButton) {
+        if banderaOnceBotonCupon{
+            //No hagas nada
+        }else{
+            if InternetHer() == true
+            {
+            
+            performSegueWithIdentifier("NewsIdentifier", sender: self)
+                
+            }else{
+                //Alerta
+                let alert = UIAlertView()
+                alert.title = "No hay Internet ⚠️"
+                alert.message = "Verifica tu conexión a internet activando tus datos moviles o desde Configuración -> WiFi en tu dispositivo 📲"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "NewsIdentifier" {
+            
+            //Pasamos el arrayCarrito al Navigation y despues al NewsTableViewController
+            //Y lo asignamos a la variable NewsTableViewController.arrayCarrito
+            //Para PERSISTENCIA de datos
+            //En la clase NewsTableViewController volvemos a regresar el array en el prepareForSegue
+            //Y se vuelven a cargar los datos desde CarritoViewController.ViewDidLoad()
+            let nav = (segue.destinationViewController as! UINavigationController)
+            let event = (nav.topViewController as! NewsTableViewController)
+                event.arrayCarrito = arrayCarrito
+            //(segue.destinationViewController as! NewsTableViewController).arrayCarrito = arrayCarrito
+        }
+        
+    }
     
     
+    func InternetHer ()->Bool{
+        var Status:Bool = false
+        let url = NSURL(string: "http://www.google.com")
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "HEAD"
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
+        
+        request.timeoutInterval = 10.0
+        
+        var response: NSURLResponse?
+        
+        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil)
+        as NSData?
+        
+        if let httpResponse = response as? NSHTTPURLResponse{
+            if httpResponse.statusCode == 200{
+            Status=true
+            }
+        
+        }
+        
+    return Status
     
     
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

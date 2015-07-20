@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6125DB731B5C192F00FDC1EE /* coupon-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6125DB721B5C192F00FDC1EE /* coupon-icon.png */; };
+		6125DB761B5C1C5700FDC1EE /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6125DB751B5C1C5700FDC1EE /* NewsTableViewCell.swift */; };
 		615274321B583562003EAAAD /* SupremaSalsa5.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 617257D51B576BA200D7786F /* SupremaSalsa5.sqlite */; };
 		615274341B58BCCD003EAAAD /* tif.png in Resources */ = {isa = PBXBuildFile; fileRef = 615274331B58BCCD003EAAAD /* tif.png */; };
 		6156C56E1B59A8CA00E8E5C4 /* ima_vacia.png in Resources */ = {isa = PBXBuildFile; fileRef = 6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */; };
@@ -97,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6125DB721B5C192F00FDC1EE /* coupon-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupon-icon.png"; sourceTree = "<group>"; };
+		6125DB751B5C1C5700FDC1EE /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		615274331B58BCCD003EAAAD /* tif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tif.png; sourceTree = "<group>"; };
 		6156C56D1B59A8CA00E8E5C4 /* ima_vacia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ima_vacia.png; sourceTree = "<group>"; };
 		6156C5721B5A04AF00E8E5C4 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = "<group>"; };
@@ -176,7 +180,7 @@
 		61E55E7A1B48764A00BE9DB5 /* settings2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings2.png; sourceTree = "<group>"; };
 		61E55E7B1B48764A00BE9DB5 /* settings3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings3.png; sourceTree = "<group>"; };
 		61E55E7E1B48784D00BE9DB5 /* logout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logout.jpg; sourceTree = "<group>"; };
-		61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewController.swift; path = ../NewsTableViewController.swift; sourceTree = "<group>"; };
 		61E55E841B4879D000BE9DB5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		61E55E861B4879F800BE9DB5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		61E55E921B4891EC00BE9DB5 /* arabeCemita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arabeCemita.jpg; sourceTree = "<group>"; };
@@ -208,6 +212,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6125DB741B5C1C3400FDC1EE /* News */ = {
+			isa = PBXGroup;
+			children = (
+				61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */,
+				6125DB751B5C1C5700FDC1EE /* NewsTableViewCell.swift */,
+			);
+			name = News;
+			path = "Suprema Salsa";
+			sourceTree = "<group>";
+		};
 		6156C56F1B59AC5C00E8E5C4 /* Carrito */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +415,7 @@
 		61E55E5F1B485EA600BE9DB5 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				6125DB721B5C192F00FDC1EE /* coupon-icon.png */,
 				6156C5741B5A060300E8E5C4 /* plusOrange.png */,
 				6156C5721B5A04AF00E8E5C4 /* scissors.png */,
 				615274331B58BCCD003EAAAD /* tif.png */,
@@ -438,9 +453,9 @@
 		61E55F061B49772200BE9DB5 /* SlideOutMenuControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6125DB741B5C1C3400FDC1EE /* News */,
 				61E55E551B485AE500BE9DB5 /* SWRevealViewController */,
 				61E55E681B486DF000BE9DB5 /* PerfilViewController.swift */,
-				61E55E821B4879A900BE9DB5 /* NewsTableViewController.swift */,
 				61E55E841B4879D000BE9DB5 /* MapViewController.swift */,
 				61E55E861B4879F800BE9DB5 /* SettingsViewController.swift */,
 			);
@@ -550,6 +565,7 @@
 				61E55E7C1B48764A00BE9DB5 /* settings2.png in Resources */,
 				617257241B558AA500D7786F /* start.png in Resources */,
 				61E55E771B4875A400BE9DB5 /* perfil_egresado.png in Resources */,
+				6125DB731B5C192F00FDC1EE /* coupon-icon.png in Resources */,
 				616808E51B4AEED800883EEE /* aguaJamaica.jpg in Resources */,
 				61E55E0B1B46FC8D00BE9DB5 /* Main.storyboard in Resources */,
 				615274341B58BCCD003EAAAD /* tif.png in Resources */,
@@ -631,6 +647,7 @@
 				618062E81B4D6FBA008473C8 /* CarritoViewController.swift in Sources */,
 				61E55E831B4879A900BE9DB5 /* NewsTableViewController.swift in Sources */,
 				617257261B558B9400D7786F /* PrincipalViewController.swift in Sources */,
+				6125DB761B5C1C5700FDC1EE /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
